@@ -1,0 +1,593 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>review</title>
+    <meta property="og:title" content="Mobillio Online Store" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta charset="utf-8" />
+    <meta property="twitter:card" content="summary_large_image" />
+
+    <style data-tag="reset-style-sheet">
+      html {  line-height: 1.15;}body {  margin: 0;}* {  box-sizing: border-box;  border-width: 0;  border-style: solid;}p,li,ul,pre,div,h1,h2,h3,h4,h5,h6,figure,blockquote,figcaption {  margin: 0;  padding: 0;}button {  background-color: transparent;}button,input,optgroup,select,textarea {  font-family: inherit;  font-size: 100%;  line-height: 1.15;  margin: 0;}button,select {  text-transform: none;}button,[type="button"],[type="reset"],[type="submit"] {  -webkit-appearance: button;}button::-moz-focus-inner,[type="button"]::-moz-focus-inner,[type="reset"]::-moz-focus-inner,[type="submit"]::-moz-focus-inner {  border-style: none;  padding: 0;}button:-moz-focus,[type="button"]:-moz-focus,[type="reset"]:-moz-focus,[type="submit"]:-moz-focus {  outline: 1px dotted ButtonText;}a {  color: inherit;  text-decoration: inherit;}input {  padding: 2px 4px;}img {  display: block;}html { scroll-behavior: smooth  }
+    </style>
+    <style data-tag="default-style-sheet">
+      html {
+        font-family: Jost;
+        font-size: 16px;
+      }
+
+      body {
+        font-weight: 400;
+        font-style:normal;
+        text-decoration: none;
+        text-transform: none;
+        letter-spacing: 0.02;
+        line-height: 1.55;
+        color: var(--dl-color-gray-black);
+        background: var(--dl-color-gray-white);
+
+        fill: var(--dl-color-gray-black);
+      }
+    </style>
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/animate.css@4.1.1/animate.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@200;300;400;500;600;700;800&amp;display=swap"
+      data-tag="font"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&amp;display=swap"
+      data-tag="font"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&amp;display=swap"
+      data-tag="font"
+    />
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/@teleporthq/teleport-custom-scripts/dist/style.css"
+    />
+  </head>
+  <body>
+    <link rel="stylesheet" href="{% static 'cnr/style.css'%}" />
+    <div>
+      <link href="{% static 'cnr/index.css'%}" rel="stylesheet" />
+
+      <div class="reviews-container">
+        <header data-thq="thq-navbar" class="reviews-navbar-interactive">
+          <div data-thq="thq-navbar-nav" class="reviews-desktop-menu">
+            <nav class="reviews-links1">
+              <a href="{% url 'index' %}"><span class="reviews-link11 thq-link thq-body-small">STYFIT</span></a>
+              <a href="{% url 'register_cloth' %}"><span class="reviews-link21 thq-link thq-body-small">
+                UPLOAD CLOTHES
+              </span></a>
+              <a href="{% url 'sell_cloth' %}">
+              <span class="thq-link thq-body-small">SELL OLD CLOTHES</span></a>
+              <a href="{% url 'virtual_tailor' %}"><span class="thq-link thq-body-small">VIRTUAL TAILOR</span></a>
+              <a href="{% url 'contact' %}"><span class="reviews-link51 thq-link thq-body-small">
+                Contact
+              </span>
+            </a>
+            </nav>
+            <div class="reviews-buttons1">
+              <a href="{% url 'webcam_page' %}">
+              <button
+                class="reviews-action11 thq-button-animated thq-button-filled"
+              >
+                <span class="thq-body-small">SHIRT TRY</span>
+              </button>
+            </a>
+            <a href="{% url 'tryon3d' %}">
+              <button
+                class="reviews-action21 thq-button-animated thq-button-outline"
+              >
+                <span class="thq-body-small">3D SHIRT TRY</span>
+              </button>
+            </a>
+            </div>
+          </div>
+          <a href="{% url 'cart' %}" class="reviews-navlink">
+            <svg
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+              class="reviews-icon10"
+            >
+              <path
+                d="M5 4h1.5L9 16m0 0h8m-8 0a2 2 0 1 0 0 4a2 2 0 0 0 0-4m8 0a2 2 0 1 0 0 4a2 2 0 0 0 0-4m-8.5-3h9.25L19 7H7.312"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              ></path>
+            </svg>
+          </a>
+          <div data-thq="thq-burger-menu" class="reviews-burger-menu">
+            <svg viewBox="0 0 1024 1024" class="reviews-icon12">
+              <path
+                d="M128 554.667h768c23.552 0 42.667-19.115 42.667-42.667s-19.115-42.667-42.667-42.667h-768c-23.552 0-42.667 19.115-42.667 42.667s19.115 42.667 42.667 42.667zM128 298.667h768c23.552 0 42.667-19.115 42.667-42.667s-19.115-42.667-42.667-42.667h-768c-23.552 0-42.667 19.115-42.667 42.667s19.115 42.667 42.667 42.667zM128 810.667h768c23.552 0 42.667-19.115 42.667-42.667s-19.115-42.667-42.667-42.667h-768c-23.552 0-42.667 19.115-42.667 42.667s19.115 42.667 42.667 42.667z"
+              ></path>
+            </svg>
+          </div>
+          <div data-thq="thq-mobile-menu" class="reviews-mobile-menu">
+            <div class="reviews-nav">
+              <div class="reviews-top">
+                <img
+                  alt="logo"
+                  src="https://aheioqhobo.cloudimg.io/v7/_playground-bucket-v2.teleporthq.io_/84ec08e8-34e9-42c7-9445-d2806d156403/fac575ac-7a41-484f-b7ac-875042de11f8?org_if_sml=1&amp;force_format=original"
+                  class="reviews-logo"
+                />
+                <div data-thq="thq-close-menu" class="reviews-close-menu">
+                  <svg viewBox="0 0 1024 1024" class="reviews-icon14">
+                    <path
+                      d="M810 274l-238 238 238 238-60 60-238-238-238 238-60-60 238-238-238-238 60-60 238 238 238-238z"
+                    ></path>
+                  </svg>
+                </div>
+              </div>
+              <nav class="reviews-links2">
+                <a
+                  href="TQ_p8VVhBwSWF"
+                  class="reviews-link12 thq-link thq-body-small"
+                >
+                  STYFIT
+                </a>
+                <a
+                  href="https://www.teleporthq.io"
+                  class="reviews-link22 thq-link thq-body-small"
+                >
+                  UPLOAD CLOTHES
+                </a>
+                <a
+                  href="https://www.teleporthq.io"
+                  class="reviews-link32 thq-link thq-body-small"
+                >
+                  SELL OLD CLOTHES
+                </a>
+                <a
+                  href="https://www.teleporthq.io"
+                  class="reviews-link42 thq-link thq-body-small"
+                >
+                  VIRTUAL TAILOR
+                </a>
+                <a
+                  href="TQ_Pt4c3WkUAp"
+                  class="reviews-link52 thq-link thq-body-small"
+                >
+                  Contact
+                </a>
+              </nav>
+              <div class="reviews-buttons2">
+                <button class="thq-button-filled">
+                  <span>SHIRT TRY</span>
+                </button>
+                <button class="thq-button-outline">
+                  <span>3D SHIRT TRY</span>
+                </button>
+              </div>
+            </div>
+            <div class="reviews-icon-group">
+              <svg
+                viewBox="0 0 950.8571428571428 1024"
+                class="thq-icon-x-small"
+              >
+                <path
+                  d="M925.714 233.143c-25.143 36.571-56.571 69.143-92.571 95.429 0.571 8 0.571 16 0.571 24 0 244-185.714 525.143-525.143 525.143-104.571 0-201.714-30.286-283.429-82.857 14.857 1.714 29.143 2.286 44.571 2.286 86.286 0 165.714-29.143 229.143-78.857-81.143-1.714-149.143-54.857-172.571-128 11.429 1.714 22.857 2.857 34.857 2.857 16.571 0 33.143-2.286 48.571-6.286-84.571-17.143-148-91.429-148-181.143v-2.286c24.571 13.714 53.143 22.286 83.429 23.429-49.714-33.143-82.286-89.714-82.286-153.714 0-34.286 9.143-65.714 25.143-93.143 90.857 112 227.429 185.143 380.571 193.143-2.857-13.714-4.571-28-4.571-42.286 0-101.714 82.286-184.571 184.571-184.571 53.143 0 101.143 22.286 134.857 58.286 41.714-8 81.714-23.429 117.143-44.571-13.714 42.857-42.857 78.857-81.143 101.714 37.143-4 73.143-14.286 106.286-28.571z"
+                ></path></svg
+              ><svg
+                viewBox="0 0 877.7142857142857 1024"
+                class="thq-icon-x-small"
+              >
+                <path
+                  d="M585.143 512c0-80.571-65.714-146.286-146.286-146.286s-146.286 65.714-146.286 146.286 65.714 146.286 146.286 146.286 146.286-65.714 146.286-146.286zM664 512c0 124.571-100.571 225.143-225.143 225.143s-225.143-100.571-225.143-225.143 100.571-225.143 225.143-225.143 225.143 100.571 225.143 225.143zM725.714 277.714c0 29.143-23.429 52.571-52.571 52.571s-52.571-23.429-52.571-52.571 23.429-52.571 52.571-52.571 52.571 23.429 52.571 52.571zM438.857 152c-64 0-201.143-5.143-258.857 17.714-20 8-34.857 17.714-50.286 33.143s-25.143 30.286-33.143 50.286c-22.857 57.714-17.714 194.857-17.714 258.857s-5.143 201.143 17.714 258.857c8 20 17.714 34.857 33.143 50.286s30.286 25.143 50.286 33.143c57.714 22.857 194.857 17.714 258.857 17.714s201.143 5.143 258.857-17.714c20-8 34.857-17.714 50.286-33.143s25.143-30.286 33.143-50.286c22.857-57.714 17.714-194.857 17.714-258.857s5.143-201.143-17.714-258.857c-8-20-17.714-34.857-33.143-50.286s-30.286-25.143-50.286-33.143c-57.714-22.857-194.857-17.714-258.857-17.714zM877.714 512c0 60.571 0.571 120.571-2.857 181.143-3.429 70.286-19.429 132.571-70.857 184s-113.714 67.429-184 70.857c-60.571 3.429-120.571 2.857-181.143 2.857s-120.571 0.571-181.143-2.857c-70.286-3.429-132.571-19.429-184-70.857s-67.429-113.714-70.857-184c-3.429-60.571-2.857-120.571-2.857-181.143s-0.571-120.571 2.857-181.143c3.429-70.286 19.429-132.571 70.857-184s113.714-67.429 184-70.857c60.571-3.429 120.571-2.857 181.143-2.857s120.571-0.571 181.143 2.857c70.286 3.429 132.571 19.429 184 70.857s67.429 113.714 70.857 184c3.429 60.571 2.857 120.571 2.857 181.143z"
+                ></path></svg
+              ><svg
+                viewBox="0 0 602.2582857142856 1024"
+                class="thq-icon-x-small"
+              >
+                <path
+                  d="M548 6.857v150.857h-89.714c-70.286 0-83.429 33.714-83.429 82.286v108h167.429l-22.286 169.143h-145.143v433.714h-174.857v-433.714h-145.714v-169.143h145.714v-124.571c0-144.571 88.571-223.429 217.714-223.429 61.714 0 114.857 4.571 130.286 6.857z"
+                ></path>
+              </svg>
+            </div>
+          </div>
+        </header>
+        <testimonial4-wrapper
+          class="testimonial4-wrapper"
+          rootclassname="testimonial4undefined"
+        >
+          <!--Testimonial4 component-->
+          <div class="thq-section-padding testimonial4root-class-name1">
+            <div class="testimonial4-max-width thq-section-max-width">
+              <div class="testimonial4-section-title">
+                <h2>
+                  <fragment class="reviews-fragment16">
+                    <span class="reviews-text20 thq-heading-2">feedback</span>
+                  </fragment>
+                </h2>
+                <p>
+                  <fragment class="reviews-fragment15">
+                    <span class="reviews-text19 thq-body-large">
+                      top rated reviews for our best product by our regular
+                      customer
+                    </span>
+                  </fragment>
+                </p>
+              </div>
+              <div class="testimonial4-content thq-flex-row">
+                <div class="testimonial4-column1 thq-card thq-flex-column">
+                  <div class="testimonial4-stars1">
+                    <svg viewBox="0 0 1024 1024" class="thq-icon-small">
+                      <path
+                        d="M512 736l-264 160 70-300-232-202 306-26 120-282 120 282 306 26-232 202 70 300z"
+                      ></path></svg
+                    ><svg viewBox="0 0 1024 1024" class="thq-icon-small">
+                      <path
+                        d="M512 736l-264 160 70-300-232-202 306-26 120-282 120 282 306 26-232 202 70 300z"
+                      ></path></svg
+                    ><svg viewBox="0 0 1024 1024" class="thq-icon-small">
+                      <path
+                        d="M512 736l-264 160 70-300-232-202 306-26 120-282 120 282 306 26-232 202 70 300z"
+                      ></path></svg
+                    ><svg viewBox="0 0 1024 1024" class="thq-icon-small">
+                      <path
+                        d="M512 736l-264 160 70-300-232-202 306-26 120-282 120 282 306 26-232 202 70 300z"
+                      ></path></svg
+                    ><svg viewBox="0 0 1024 1024" class="thq-icon-small">
+                      <path
+                        d="M512 736l-264 160 70-300-232-202 306-26 120-282 120 282 306 26-232 202 70 300z"
+                      ></path>
+                    </svg>
+                  </div>
+                  <span>
+                    <fragment class="reviews-fragment12">
+                      <span class="reviews-text16 thq-body-small">
+                        STYFIT has become my go-to place for trendy streetwear.
+                        The quality and style of their clothing are unmatched.
+                      </span>
+                    </fragment>
+                  </span>
+                  <div class="testimonial4-avatar1">
+                    <img
+                      alt="Image of Sara Smith"
+                      src="https://images.unsplash.com/photo-1720867543317-4cb7a30e6b99?crop=entropy&amp;cs=tinysrgb&amp;fit=max&amp;fm=jpg&amp;ixid=M3w5MTMyMXwwfDF8cmFuZG9tfHx8fHx8fHx8MTcyNTAwNDQwNXw&amp;ixlib=rb-4.0.3&amp;q=80&amp;w=1080"
+                      class="testimonial4-avatar-image1 thq-img-ratio-1-1 thq-img-round"
+                    />
+                    <div class="testimonial4-avatar-content1">
+                      <span>
+                        <fragment class="reviews-fragment17">
+                          <span class="reviews-text21 thq-body-small">
+                            khushi
+                          </span>
+                        </fragment>
+                      </span>
+                      <span>
+                        <fragment class="reviews-fragment18">
+                          <span class="reviews-text22 thq-body-small">
+                            Fashion Blogger
+                          </span>
+                        </fragment>
+                      </span>
+                    </div>
+                  </div>
+                </div>
+                <div class="testimonial4-column2 thq-card thq-flex-column">
+                  <div class="testimonial4-stars2">
+                    <svg viewBox="0 0 1024 1024" class="thq-icon-small">
+                      <path
+                        d="M512 736l-264 160 70-300-232-202 306-26 120-282 120 282 306 26-232 202 70 300z"
+                      ></path></svg
+                    ><svg viewBox="0 0 1024 1024" class="thq-icon-small">
+                      <path
+                        d="M512 736l-264 160 70-300-232-202 306-26 120-282 120 282 306 26-232 202 70 300z"
+                      ></path></svg
+                    ><svg viewBox="0 0 1024 1024" class="thq-icon-small">
+                      <path
+                        d="M512 736l-264 160 70-300-232-202 306-26 120-282 120 282 306 26-232 202 70 300z"
+                      ></path></svg
+                    ><svg viewBox="0 0 1024 1024" class="thq-icon-small">
+                      <path
+                        d="M512 736l-264 160 70-300-232-202 306-26 120-282 120 282 306 26-232 202 70 300z"
+                      ></path></svg
+                    ><svg viewBox="0 0 1024 1024" class="thq-icon-small">
+                      <path
+                        d="M512 736l-264 160 70-300-232-202 306-26 120-282 120 282 306 26-232 202 70 300z"
+                      ></path>
+                    </svg>
+                  </div>
+                  <span>
+                    <fragment class="reviews-fragment13">
+                      <span class="reviews-text17 thq-body-small">
+                        I love how STYFIT combines comfort with style in their
+                        athleisure collection. Perfect for my active lifestyle.
+                      </span>
+                    </fragment>
+                  </span>
+                  <div class="testimonial4-avatar2">
+                    <img
+                      alt="Image of Alex Johnson"
+                      src="https://images.unsplash.com/photo-1536620303020-d49916c8634b?crop=entropy&amp;cs=tinysrgb&amp;fit=max&amp;fm=jpg&amp;ixid=M3w5MTMyMXwwfDF8cmFuZG9tfHx8fHx8fHx8MTcyNTAwNDQwNXw&amp;ixlib=rb-4.0.3&amp;q=80&amp;w=1080"
+                      class="testimonial4-avatar-image2 thq-img-ratio-1-1 thq-img-round"
+                    />
+                    <div class="testimonial4-avatar-content2">
+                      <span>
+                        <fragment class="reviews-fragment10">
+                          <span class="reviews-text14 thq-body-small">
+                            kashish shrivastav
+                          </span>
+                        </fragment>
+                      </span>
+                      <span>
+                        <fragment class="reviews-fragment19">
+                          <span class="reviews-text23 thq-body-small">
+                            Influencer
+                          </span>
+                        </fragment>
+                      </span>
+                    </div>
+                  </div>
+                </div>
+                <div class="testimonial4-column3 thq-card thq-flex-column">
+                  <div class="testimonial4-stars3">
+                    <svg viewBox="0 0 1024 1024" class="thq-icon-small">
+                      <path
+                        d="M512 736l-264 160 70-300-232-202 306-26 120-282 120 282 306 26-232 202 70 300z"
+                      ></path></svg
+                    ><svg viewBox="0 0 1024 1024" class="thq-icon-small">
+                      <path
+                        d="M512 736l-264 160 70-300-232-202 306-26 120-282 120 282 306 26-232 202 70 300z"
+                      ></path></svg
+                    ><svg viewBox="0 0 1024 1024" class="thq-icon-small">
+                      <path
+                        d="M512 736l-264 160 70-300-232-202 306-26 120-282 120 282 306 26-232 202 70 300z"
+                      ></path></svg
+                    ><svg viewBox="0 0 1024 1024" class="thq-icon-small">
+                      <path
+                        d="M512 736l-264 160 70-300-232-202 306-26 120-282 120 282 306 26-232 202 70 300z"
+                      ></path></svg
+                    ><svg viewBox="0 0 1024 1024" class="thq-icon-small">
+                      <path
+                        d="M512 736l-264 160 70-300-232-202 306-26 120-282 120 282 306 26-232 202 70 300z"
+                      ></path>
+                    </svg>
+                  </div>
+                  <span>
+                    <fragment class="reviews-fragment14">
+                      <span class="reviews-text18 thq-body-small">
+                        STYFIT's streetwear jackets are a must-have for anyone
+                        looking to stay on top of the latest fashion trends.
+                      </span>
+                    </fragment>
+                  </span>
+                  <div class="testimonial4-avatar3">
+                    <img
+                      alt="Image of Emily Brown"
+                      src="https://images.unsplash.com/photo-1489278353717-f64c6ee8a4d2?crop=entropy&amp;cs=tinysrgb&amp;fit=max&amp;fm=jpg&amp;ixid=M3w5MTMyMXwwfDF8cmFuZG9tfHx8fHx8fHx8MTcyNTAwNDQwNnw&amp;ixlib=rb-4.0.3&amp;q=80&amp;w=1080"
+                      class="testimonial4-avatar-image3 thq-img-ratio-1-1 thq-img-round"
+                    />
+                    <div class="testimonial4-avatar-content3">
+                      <span>
+                        <fragment class="reviews-fragment11">
+                          <span class="reviews-text15 thq-body-small">
+                            mansi singh
+                          </span>
+                        </fragment>
+                      </span>
+                      <span>
+                        <fragment class="reviews-fragment20">
+                          <span class="reviews-text24 thq-body-small">
+                            Fashion Enthusiast
+                          </span>
+                        </fragment>
+                      </span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </testimonial4-wrapper>
+        <blog-post-header5-wrapper class="blog-post-header5-wrapper">
+          <!--BlogPostHeader5 component-->
+          <div class="blog-post-header5-blog-post-header3 thq-section-padding">
+            <div class="blog-post-header5-max-width thq-section-max-width">
+              <div class="blog-post-header5-section-title">
+                <div class="blog-post-header5-title1">
+                  <div class="blog-post-header5-breadcrumbs">
+                    <span class="blog-post-header5-text1 thq-body-small">
+                      Blog
+                    </span>
+                    <svg viewBox="0 0 1024 1024" class="thq-icon-small">
+                      <path
+                        d="M426 256l256 256-256 256-60-60 196-196-196-196z"
+                      ></path>
+                    </svg>
+                    <span>
+                      <fragment class="reviews-fragment22">
+                        <span class="reviews-text26 thq-body-small">
+                          Fashion
+                        </span>
+                      </fragment>
+                    </span>
+                  </div>
+                  <span>
+                    <fragment class="reviews-fragment23">
+                      <span class="reviews-text27 thq-body-small">
+                        5 min read
+                      </span>
+                    </fragment>
+                  </span>
+                  <div class="blog-post-header5-content1">
+                    <h1>
+                      <fragment class="reviews-fragment25">
+                        <span class="reviews-text29 thq-heading-1">
+                          <span class="reviews-text30">STYFIT</span>
+                          <span class="reviews-text31">
+                            covers the latest, greatest, celebrity styles,
+                            runaway trends, shopping suggestions, and try-on
+                            features. features that are also convenient for
+                            physically impaired people, especially blind people.
+                            It traverses a wide range of attire, helping
+                            customers navigate the vast clothing line with ease.
+                          </span>
+                        </span>
+                      </fragment>
+                    </h1>
+                    <div class="blog-post-header5-content2">
+                      <div class="blog-post-header5-author">
+                        <span class="blog-post-header5-text2 thq-body-small">
+                          Written by
+                        </span>
+                        <span>
+                          <fragment class="reviews-fragment24">
+                            <span class="reviews-text28 thq-body-small">
+                              STYFIT Team
+                            </span>
+                          </fragment>
+                        </span>
+                      </div>
+                      <div class="blog-post-header5-time">
+                        <span>
+                          <fragment class="reviews-fragment21">
+                            <span class="reviews-text25 thq-body-small">
+                              September 15, 2024
+                            </span>
+                          </fragment>
+                        </span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="blog-post-header5-container">
+                <img
+                  alt="Gen Z Fashion Trends"
+                  src="https://images.unsplash.com/photo-1627349864724-645aea4fbda0?crop=entropy&amp;cs=tinysrgb&amp;fit=max&amp;fm=jpg&amp;ixid=M3w5MTMyMXwwfDF8cmFuZG9tfHx8fHx8fHx8MTcyNTAwNTIzMHw&amp;ixlib=rb-4.0.3&amp;q=80&amp;w=1080"
+                  class="blog-post-header5-image1 thq-img-ratio-4-3"
+                />
+              </div>
+            </div>
+          </div>
+        </blog-post-header5-wrapper>
+        <span>
+          <span class="reviews-text33">
+            &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+            &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+            &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+            &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+            &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+          </span>
+          <span class="reviews-text34">Terms and Conditions</span>
+          <br class="reviews-text35" />
+          <br class="reviews-text36" />
+          <span class="reviews-text37">
+            &nbsp; &nbsp; Welcome to StyFit! By using our app, you agree to the
+            following terms and conditions:
+          </span>
+          <br class="reviews-text38" />
+          <br class="reviews-text39" />
+          <span class="reviews-text40">&nbsp; &nbsp;</span>
+          <span class="reviews-text41">Eligibility:</span>
+          <span class="reviews-text42">
+            StyFit is designed for users aged 13 and above. By using the app,
+            you confirm that you meet this age requirement.
+          </span>
+          <br class="reviews-text43" />
+          <br class="reviews-text44" />
+          <span class="reviews-text45">Account:</span>
+          <span class="reviews-text46">
+            You are responsible for maintaining the confidentiality of your
+            account and password. All activities under your account are your
+            responsibility.
+          </span>
+          <br class="reviews-text47" />
+          <br class="reviews-text48" />
+          <span class="reviews-text49">Services:</span>
+          <span class="reviews-text50">
+            StyFit provides fashion suggestions, virtual try-on features, and
+            clothing upgrade options. The accuracy of virtual try-ons and
+            suggestions may vary based on user data and device capabilities.
+          </span>
+          <br class="reviews-text51" />
+          <br class="reviews-text52" />
+          <span class="reviews-text53">User Data:</span>
+          <span class="reviews-text54">
+            By using StyFit, you agree to provide accurate personal and
+            fashion-related data. We may collect and use this data to enhance
+            your experience. We respect your privacy and handle your data
+            following our Privacy Policy.
+          </span>
+          <br class="reviews-text55" />
+          <br class="reviews-text56" />
+          <span class="reviews-text57">Purchases:</span>
+          <span class="reviews-text58">
+            Any purchases made through StyFit are subject to availability. We
+            are not responsible for third-party vendor issues such as delivery
+            or quality.
+          </span>
+          <br class="reviews-text59" />
+          <br class="reviews-text60" />
+          <span class="reviews-text61">Content:</span>
+          <span class="reviews-text62">
+            All content provided by StyFit, including images, text, and designs,
+            is owned by StyFit. You may not reproduce or distribute this content
+            without our permission.
+          </span>
+          <br class="reviews-text63" />
+          <br class="reviews-text64" />
+          <span class="reviews-text65">Modifications:</span>
+          <span class="reviews-text66">
+            We reserve the right to modify or discontinue any part of the app or
+            these terms at any time. Continued use of StyFit after changes means
+            you accept the new terms.
+          </span>
+          <br class="reviews-text67" />
+          <br class="reviews-text68" />
+          <span class="reviews-text69">Liability:</span>
+          <span class="reviews-text70">
+            StyFit is not liable for any indirect, incidental, or consequential
+            damages arising from your use of the app.
+          </span>
+          <br class="reviews-text71" />
+          <br class="reviews-text72" />
+          <span class="reviews-text73">
+            Governing Law: These terms are governed by the laws of [Your
+            Country/Region].
+          </span>
+          <br class="reviews-text74" />
+          <br class="reviews-text75" />
+          <span class="reviews-text76">
+            Thank you for choosing StyFit! Enjoy your fashion journey.
+          </span>
+          <br class="reviews-text77" />
+          <br class="reviews-text78" />
+          <span class="reviews-text79">
+            Contact Us: If you have any questions, please reach out at [Contact
+            Information].
+          </span>
+          <br class="reviews-text80" />
+          <br class="reviews-text81" />
+          <br class="reviews-text82" />
+          <br class="reviews-text83" />
+          <br />
+          <br />
+          <br />
+          <br />
+          <br />
+        </span>
+      </div>
+    </div>
+    <script
+      defer=""
+      src="https://unpkg.com/@teleporthq/teleport-custom-scripts"
+    ></script>
+  </body>
+</html>

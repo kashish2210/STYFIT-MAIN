@@ -1,0 +1,120 @@
+.gallery231-gallery3 {
+  width: 100%;
+  height: auto;
+  display: flex;
+  overflow: hidden;
+  position: relative;
+  align-items: center;
+  flex-shrink: 0;
+  flex-direction: column;
+}
+.gallery231-max-width {
+  gap: var(--dl-space-space-threeunits);
+  width: 100%;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+.gallery231-section-title {
+  gap: var(--dl-space-space-oneandhalfunits);
+  width: auto;
+  display: flex;
+  max-width: 800px;
+  align-items: center;
+  flex-shrink: 0;
+  flex-direction: column;
+}
+.gallery231-content {
+  gap: var(--dl-space-space-oneandhalfunits);
+  width: 100%;
+  display: flex;
+  align-self: stretch;
+  align-items: center;
+  flex-shrink: 0;
+  justify-content: center;
+}
+.gallery231-container1 {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.gallery231-image1 {
+  width: 100%;
+  max-width: 600px;
+  align-self: center;
+}
+.gallery231-container2 {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.gallery231-image2 {
+  width: 100%;
+  max-width: 600px;
+  align-self: center;
+}
+.gallery231-container3 {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.gallery231-image31 {
+  width: 100%;
+  max-width: 600px;
+}
+.gallery231-container4 {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.gallery231-image32 {
+  width: 100%;
+  max-width: 600px;
+}
+.gallery231-fragment1 {
+  display: contents;
+}
+.gallery231-text3 {
+  text-align: center;
+}
+.gallery231-fragment2 {
+  display: contents;
+}
+.gallery231-text4 {
+  text-align: center;
+}
+@media(max-width: 991px) {
+  .gallery231-content {
+    align-items: center;
+    flex-direction: column;
+  }
+  .gallery231-image1 {
+    flex: 0 0 auto;
+    width: 100%;
+    height: 400px;
+  }
+  .gallery231-image2 {
+    flex: 0 0 auto;
+    width: 100%;
+    height: 400px;
+  }
+  .gallery231-image31 {
+    flex: 0 0 auto;
+    width: 100%;
+    height: 400px;
+  }
+  .gallery231-image32 {
+    flex: 0 0 auto;
+    width: 100%;
+    height: 400px;
+  }
+}
+@media(max-width: 479px) {
+  .gallery231-content {
+    gap: var(--dl-space-space-oneandhalfunits);
+  }
+}

@@ -1,0 +1,25 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Height and Waist Measurement</title>
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+</head>
+<body>
+    <h1>Height and Waist Measurement</h1>
+
+    <!-- Button to start the 3D Measurement -->
+    <button id="start-measurement-btn">Start Measurement</button>
+
+    <!-- Image element to display video stream -->
+    <img id="video-stream" src="" alt="Video Stream" />
+
+    <script>
+        document.getElementById('start-measurement-btn').addEventListener('click', function() {
+            // Update the source of the image element to start streaming
+            document.getElementById('video-stream').src = "{% url 'measurement_feed' %}";
+        });
+    </script>
+</body>
+</html>

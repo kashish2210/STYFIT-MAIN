@@ -1,0 +1,1424 @@
+
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>About</title>
+    <meta
+      property="og:title"
+      content="About - Impressionable Immaculate Dragonfly"
+    />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta charset="utf-8" />
+    <meta property="twitter:card" content="summary_large_image" />
+
+    <style data-tag="reset-style-sheet">
+      html {  line-height: 1.15;}body {  margin: 0;}* {  box-sizing: border-box;  border-width: 0;  border-style: solid;}p,li,ul,pre,div,h1,h2,h3,h4,h5,h6,figure,blockquote,figcaption {  margin: 0;  padding: 0;}button {  background-color: transparent;}button,input,optgroup,select,textarea {  font-family: inherit;  font-size: 100%;  line-height: 1.15;  margin: 0;}button,select {  text-transform: none;}button,[type="button"],[type="reset"],[type="submit"] {  -webkit-appearance: button;}button::-moz-focus-inner,[type="button"]::-moz-focus-inner,[type="reset"]::-moz-focus-inner,[type="submit"]::-moz-focus-inner {  border-style: none;  padding: 0;}button:-moz-focus,[type="button"]:-moz-focus,[type="reset"]:-moz-focus,[type="submit"]:-moz-focus {  outline: 1px dotted ButtonText;}a {  color: inherit;  text-decoration: inherit;}input {  padding: 2px 4px;}img {  display: block;}html { scroll-behavior: smooth  }
+    </style>
+    <style data-tag="default-style-sheet">
+      html {
+        font-family: Inter;
+        font-size: 16px;
+      }
+
+      body {
+        font-weight: 400;
+        font-style:normal;
+        text-decoration: none;
+        text-transform: none;
+        letter-spacing: normal;
+        line-height: 1.15;
+        color: var(--dl-color-theme-neutral-dark);
+        background: var(--dl-color-theme-neutral-light);
+
+        fill: var(--dl-color-theme-neutral-dark);
+      }
+    </style>
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/animate.css@4.1.1/animate.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&amp;display=swap"
+      data-tag="font"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=STIX+Two+Text:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&amp;display=swap"
+      data-tag="font"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Inter:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&amp;display=swap"
+      data-tag="font"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&amp;display=swap"
+      data-tag="font"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&amp;display=swap"
+      data-tag="font"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&amp;display=swap"
+      data-tag="font"
+    />
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/@teleporthq/teleport-custom-scripts/dist/style.css"
+    />
+    <style>
+      [data-thq="thq-dropdown"]:hover > [data-thq="thq-dropdown-list"] {
+          display: flex;
+        }
+
+        [data-thq="thq-dropdown"]:hover > div [data-thq="thq-dropdown-arrow"] {
+          transform: rotate(90deg);
+        }
+    </style>
+  </head>
+  <body>
+    <link rel="stylesheet" href="{% static 'style.css' %}" />
+    <div>
+      <link href="{% static 'about.css' %}" rel="stylesheet" />
+
+      <div class="about-container">
+        <header data-thq="thq-navbar" class="about-navbar-interactive">
+          <div data-thq="thq-navbar-nav" class="about-desktop-menu">
+            <nav class="about-links1">
+              <a href="{% url 'index' %}" class="about-link11 thq-body-small thq-link">
+                STYFIT
+              </a>
+              <a
+                href="{% url 'register_cloth' %}"
+                class="about-link21 thq-body-small thq-link"
+              >
+                UPLOAD CLOTHES
+              </a>
+              <a
+                href="{% url 'sell_cloth' %}"
+                class="about-link31 thq-body-small thq-link"
+              >
+                SELL OLD CLOTHES
+              </a>
+              <a
+                href="https://youtu.be/fE2pa1gejVA?si=qtTudy4wYeeBLgL-"
+                class="about-link41 thq-body-small thq-link"
+              >
+                VIRTUAL TAILOR
+              </a>
+              <a
+                href="contact.html"
+                class="about-link51 thq-body-small thq-link"
+              >
+                Contact
+              </a>
+            </nav>
+            <div class="about-buttons1">
+              <button
+                class="about-action11 thq-button-animated thq-button-filled"
+              >
+                <span class="thq-body-small">SHIRT TRY</span>
+              </button>
+              <button
+                class="about-action21 thq-button-animated thq-button-outline"
+              >
+                <span class="thq-body-small">3D SHIRT TRY</span>
+              </button>
+            </div>
+          </div>
+          <a href="about.html" class="about-navlink">
+            <svg
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+              class="about-icon10"
+            >
+              <path
+                d="M5 4h1.5L9 16m0 0h8m-8 0a2 2 0 1 0 0 4a2 2 0 0 0 0-4m8 0a2 2 0 1 0 0 4a2 2 0 0 0 0-4m-8.5-3h9.25L19 7H7.312"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              ></path>
+            </svg>
+          </a>
+          <div data-thq="thq-burger-menu" class="about-burger-menu">
+            <svg viewBox="0 0 1024 1024" class="about-icon12">
+              <path
+                d="M128 554.667h768c23.552 0 42.667-19.115 42.667-42.667s-19.115-42.667-42.667-42.667h-768c-23.552 0-42.667 19.115-42.667 42.667s19.115 42.667 42.667 42.667zM128 298.667h768c23.552 0 42.667-19.115 42.667-42.667s-19.115-42.667-42.667-42.667h-768c-23.552 0-42.667 19.115-42.667 42.667s19.115 42.667 42.667 42.667zM128 810.667h768c23.552 0 42.667-19.115 42.667-42.667s-19.115-42.667-42.667-42.667h-768c-23.552 0-42.667 19.115-42.667 42.667s19.115 42.667 42.667 42.667z"
+              ></path>
+            </svg>
+          </div>
+          <div data-thq="thq-mobile-menu" class="about-mobile-menu">
+            <div class="about-nav">
+              <div class="about-top">
+                <img
+                  alt="logo"
+                  src="https://aheioqhobo.cloudimg.io/v7/_playground-bucket-v2.teleporthq.io_/84ec08e8-34e9-42c7-9445-d2806d156403/fac575ac-7a41-484f-b7ac-875042de11f8?org_if_sml=1&amp;force_format=original"
+                  class="about-logo"
+                />
+                <div data-thq="thq-close-menu" class="about-close-menu">
+                  <svg viewBox="0 0 1024 1024" class="about-icon14">
+                    <path
+                      d="M810 274l-238 238 238 238-60 60-238-238-238 238-60-60 238-238-238-238 60-60 238 238 238-238z"
+                    ></path>
+                  </svg>
+                </div>
+              </div>
+              <nav class="about-links2">
+                <a
+                  href="TQ_p8VVhBwSWF"
+                  class="about-link12 thq-body-small thq-link"
+                >
+                  STYFIT
+                </a>
+                <a
+                  href="https://www.teleporthq.io"
+                  class="about-link22 thq-body-small thq-link"
+                >
+                  UPLOAD CLOTHES
+                </a>
+                <a
+                  href="https://www.teleporthq.io"
+                  class="about-link32 thq-body-small thq-link"
+                >
+                  SELL OLD CLOTHES
+                </a>
+                <a
+                  href="https://www.teleporthq.io"
+                  class="about-link42 thq-body-small thq-link"
+                >
+                  VIRTUAL TAILOR
+                </a>
+                <a
+                  href="TQ_Pt4c3WkUAp"
+                  class="about-link52 thq-body-small thq-link"
+                >
+                  Contact
+                </a>
+              </nav>
+              <div class="about-buttons2">
+                <button class="thq-button-filled">
+                  <span>SHIRT TRY</span>
+                </button>
+                <button class="thq-button-outline">
+                  <span>3D SHIRT TRY</span>
+                </button>
+              </div>
+            </div>
+            <div class="about-icon-group">
+              <svg
+                viewBox="0 0 950.8571428571428 1024"
+                class="thq-icon-x-small"
+              >
+                <path
+                  d="M925.714 233.143c-25.143 36.571-56.571 69.143-92.571 95.429 0.571 8 0.571 16 0.571 24 0 244-185.714 525.143-525.143 525.143-104.571 0-201.714-30.286-283.429-82.857 14.857 1.714 29.143 2.286 44.571 2.286 86.286 0 165.714-29.143 229.143-78.857-81.143-1.714-149.143-54.857-172.571-128 11.429 1.714 22.857 2.857 34.857 2.857 16.571 0 33.143-2.286 48.571-6.286-84.571-17.143-148-91.429-148-181.143v-2.286c24.571 13.714 53.143 22.286 83.429 23.429-49.714-33.143-82.286-89.714-82.286-153.714 0-34.286 9.143-65.714 25.143-93.143 90.857 112 227.429 185.143 380.571 193.143-2.857-13.714-4.571-28-4.571-42.286 0-101.714 82.286-184.571 184.571-184.571 53.143 0 101.143 22.286 134.857 58.286 41.714-8 81.714-23.429 117.143-44.571-13.714 42.857-42.857 78.857-81.143 101.714 37.143-4 73.143-14.286 106.286-28.571z"
+                ></path></svg
+              ><svg
+                viewBox="0 0 877.7142857142857 1024"
+                class="thq-icon-x-small"
+              >
+                <path
+                  d="M585.143 512c0-80.571-65.714-146.286-146.286-146.286s-146.286 65.714-146.286 146.286 65.714 146.286 146.286 146.286 146.286-65.714 146.286-146.286zM664 512c0 124.571-100.571 225.143-225.143 225.143s-225.143-100.571-225.143-225.143 100.571-225.143 225.143-225.143 225.143 100.571 225.143 225.143zM725.714 277.714c0 29.143-23.429 52.571-52.571 52.571s-52.571-23.429-52.571-52.571 23.429-52.571 52.571-52.571 52.571 23.429 52.571 52.571zM438.857 152c-64 0-201.143-5.143-258.857 17.714-20 8-34.857 17.714-50.286 33.143s-25.143 30.286-33.143 50.286c-22.857 57.714-17.714 194.857-17.714 258.857s-5.143 201.143 17.714 258.857c8 20 17.714 34.857 33.143 50.286s30.286 25.143 50.286 33.143c57.714 22.857 194.857 17.714 258.857 17.714s201.143 5.143 258.857-17.714c20-8 34.857-17.714 50.286-33.143s25.143-30.286 33.143-50.286c22.857-57.714 17.714-194.857 17.714-258.857s5.143-201.143-17.714-258.857c-8-20-17.714-34.857-33.143-50.286s-30.286-25.143-50.286-33.143c-57.714-22.857-194.857-17.714-258.857-17.714zM877.714 512c0 60.571 0.571 120.571-2.857 181.143-3.429 70.286-19.429 132.571-70.857 184s-113.714 67.429-184 70.857c-60.571 3.429-120.571 2.857-181.143 2.857s-120.571 0.571-181.143-2.857c-70.286-3.429-132.571-19.429-184-70.857s-67.429-113.714-70.857-184c-3.429-60.571-2.857-120.571-2.857-181.143s-0.571-120.571 2.857-181.143c3.429-70.286 19.429-132.571 70.857-184s113.714-67.429 184-70.857c60.571-3.429 120.571-2.857 181.143-2.857s120.571-0.571 181.143 2.857c70.286 3.429 132.571 19.429 184 70.857s67.429 113.714 70.857 184c3.429 60.571 2.857 120.571 2.857 181.143z"
+                ></path></svg
+              ><svg
+                viewBox="0 0 602.2582857142856 1024"
+                class="thq-icon-x-small"
+              >
+                <path
+                  d="M548 6.857v150.857h-89.714c-70.286 0-83.429 33.714-83.429 82.286v108h167.429l-22.286 169.143h-145.143v433.714h-174.857v-433.714h-145.714v-169.143h145.714v-124.571c0-144.571 88.571-223.429 217.714-223.429 61.714 0 114.857 4.571 130.286 6.857z"
+                ></path>
+              </svg>
+            </div>
+          </div>
+        </header>
+        <hero8-wrapper class="hero8-wrapper">
+          <!--Hero8 component-->
+          <div class="hero8-header26 thq-section-padding root-class-name">
+            <div class="hero8-max-width thq-section-max-width thq-flex-column">
+              <div class="hero8-column">
+                <div class="hero8-content">
+                  <h1>
+                    <fragment class="about-fragment13">
+                      <span class="about-text17 thq-heading-1">
+                        Welcome to STYFIT
+                      </span>
+                    </fragment>
+                  </h1>
+                  <p>
+                    <fragment class="about-fragment12">
+                      <span class="about-text16 thq-body-large">
+                        Elevate Your Style Game with STYFIT
+                      </span>
+                    </fragment>
+                  </p>
+                  <div class="hero8-actions">
+                    <button class="thq-button-filled hero8-button1">
+                      <span>
+                        <fragment class="about-fragment10">
+                          <span class="about-text14 thq-body-small">
+                            Explore Trends
+                          </span>
+                        </fragment>
+                      </span>
+                    </button>
+                    <button class="thq-button-outline hero8-button2">
+                      <span>
+                        <fragment class="about-fragment11">
+                          <span class="about-text15 thq-body-small">
+                            Shop Now
+                          </span>
+                        </fragment>
+                      </span>
+                    </button>
+                  </div>
+                </div>
+              </div>
+              <img
+                alt="STYFIT Fashion Website"
+                src="https://images.unsplash.com/photo-1630710577145-45b166a0f163?crop=entropy&amp;cs=tinysrgb&amp;fit=max&amp;fm=jpg&amp;ixid=M3w5MTMyMXwwfDF8cmFuZG9tfHx8fHx8fHx8MTcyNDY2OTU3OXw&amp;ixlib=rb-4.0.3&amp;q=80&amp;w=1080"
+                class="thq-img-ratio-16-9"
+              />
+            </div>
+          </div>
+        </hero8-wrapper>
+        <stats2-wrapper class="stats2-wrapper">
+          <!--Stats2 component-->
+          <div class="stats2-container1 thq-section-padding root-class-name">
+            <div class="stats2-max-width thq-section-max-width">
+              <div class="stats2-container2 thq-flex-column">
+                <img
+                  alt="Streetwear Jacket"
+                  src="https://images.unsplash.com/photo-1514866747592-c2d279258a78?crop=entropy&amp;cs=tinysrgb&amp;fit=max&amp;fm=jpg&amp;ixid=M3w5MTMyMXwwfDF8cmFuZG9tfHx8fHx8fHx8MTcyNDY2OTU3OXw&amp;ixlib=rb-4.0.3&amp;q=80&amp;w=1080"
+                  class="thq-img-ratio-1-1 stats2-image"
+                />
+              </div>
+              <div class="stats2-container3 thq-flex-column">
+                <span>
+                  <fragment class="about-fragment18">
+                    <span class="about-text22 thq-body-small">Shop Now</span>
+                  </fragment>
+                </span>
+                <h2>
+                  <fragment class="about-fragment20">
+                    <span class="about-text24 thq-heading-2">STYFIT Stats</span>
+                  </fragment>
+                </h2>
+                <p>
+                  <fragment class="about-fragment19">
+                    <span class="about-text23 thq-body-large">
+                      View Collection
+                    </span>
+                  </fragment>
+                </p>
+                <div class="stats2-container4 thq-grid-2">
+                  <div class="stats2-container5">
+                    <h2>
+                      <fragment class="about-fragment14">
+                        <span class="about-text18 thq-heading-2">
+                          Trendy Streetwear Items
+                        </span>
+                      </fragment>
+                    </h2>
+                    <span>
+                      <fragment class="about-fragment21">
+                        <span class="about-text25 thq-body-small">
+                          Explore a wide range of trendy streetwear items that
+                          cater to the Gen Z fashion sense.
+                        </span>
+                      </fragment>
+                    </span>
+                  </div>
+                  <div class="stats2-container6">
+                    <h2>
+                      <fragment class="about-fragment15">
+                        <span class="about-text19 thq-heading-2">
+                          Athleisure Collection
+                        </span>
+                      </fragment>
+                    </h2>
+                    <span>
+                      <fragment class="about-fragment22">
+                        <span class="about-text26 thq-body-small">
+                          Discover our stylish and comfortable athleisure
+                          collection designed for the active lifestyle of Gen Z.
+                        </span>
+                      </fragment>
+                    </span>
+                  </div>
+                </div>
+                <div class="stats2-container7 thq-grid-2">
+                  <div class="stats2-container8">
+                    <h2>
+                      <fragment class="about-fragment16">
+                        <span class="about-text20 thq-heading-2">
+                          New Releases
+                        </span>
+                      </fragment>
+                    </h2>
+                    <span>
+                      <fragment class="about-fragment23">
+                        <span class="about-text27 thq-body-small">
+                          Stay updated on the latest fashion releases and trends
+                          through our newsletters and social media platforms.
+                        </span>
+                      </fragment>
+                    </span>
+                  </div>
+                  <div class="stats2-container9">
+                    <h2>
+                      <fragment class="about-fragment17">
+                        <span class="about-text21 thq-heading-2">
+                          Affordable Prices
+                        </span>
+                      </fragment>
+                    </h2>
+                    <span>
+                      <fragment class="about-fragment24">
+                        <span class="about-text28 thq-body-small">
+                          Get your hands on trendy streetwear and athleisure
+                          items at affordable prices that fit your budget.
+                        </span>
+                      </fragment>
+                    </span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </stats2-wrapper>
+        <logos1-wrapper class="logos1-wrapper">
+          <!--Logos1 component-->
+          <div class="logos1-container1 thq-section-padding root-class-name">
+            <div class="logos1-max-width thq-section-max-width">
+              <h2>
+                <fragment class="about-fragment25">
+                  <span class="about-text29 thq-heading-2">
+                    Trusted by the world's best companies social proof to build
+                    credibility
+                  </span>
+                </fragment>
+              </h2>
+              <div class="thq-grid-6">
+                <img
+                  alt="STYFIT Logo"
+                  src="{% static 'public/download-1400w.png' %}"
+                  class="logos1-logo1 thq-img-ratio-16-9"
+                />
+              </div>
+            </div>
+          </div>
+        </logos1-wrapper>
+        <features11-wrapper class="features11-wrapper">
+          <!--Features11 component-->
+          <div class="features11-layout251 thq-section-padding root-class-name">
+            <div class="features11-max-width thq-section-max-width">
+              <div class="thq-flex-row features11-section-title">
+                <div class="features11-column thq-flex-column">
+                  <span>
+                    <fragment class="about-fragment26">
+                      <span class="about-text30 thq-body-small">
+                        Elevate Your Style Game
+                      </span>
+                    </fragment>
+                  </span>
+                  <h2>
+                    <fragment class="about-fragment28">
+                      <span class="about-text32 thq-heading-2">
+                        Key Features
+                      </span>
+                    </fragment>
+                  </h2>
+                </div>
+                <span>
+                  <fragment class="about-fragment33">
+                    <span class="about-text37 thq-body-small">
+                      Discover the exciting features that make STYFIT your go-to
+                      fashion destination.
+                    </span>
+                  </fragment>
+                </span>
+              </div>
+              <div class="features11-content1">
+                <div class="features11-row thq-flex-row">
+                  <div class="features11-feature1 thq-flex-column">
+                    <img
+                      alt="Streetwear Image"
+                      src="https://images.unsplash.com/photo-1624372635310-01d078c05dd9?crop=entropy&amp;cs=tinysrgb&amp;fit=max&amp;fm=jpg&amp;ixid=M3w5MTMyMXwwfDF8cmFuZG9tfHx8fHx8fHx8MTcyNDY2OTU4MHw&amp;ixlib=rb-4.0.3&amp;q=80&amp;w=1080"
+                      class="thq-img-ratio-4-3 features11-feature1-image"
+                    />
+                    <div class="features11-content2 thq-flex-column">
+                      <h3>
+                        <fragment class="about-fragment29">
+                          <span class="about-text33 thq-heading-3">
+                            Trendy Streetwear
+                          </span>
+                        </fragment>
+                      </h3>
+                      <span>
+                        <fragment class="about-fragment34">
+                          <span class="about-text38 thq-body-small">
+                            Explore our collection of trendy streetwear pieces
+                            that will keep you ahead of the fashion curve.
+                          </span>
+                        </fragment>
+                      </span>
+                    </div>
+                  </div>
+                  <div class="features11-feature2 thq-flex-column">
+                    <img
+                      alt="Athleisure Image"
+                      src="https://images.unsplash.com/photo-1477144281006-a10123007fba?crop=entropy&amp;cs=tinysrgb&amp;fit=max&amp;fm=jpg&amp;ixid=M3w5MTMyMXwwfDF8cmFuZG9tfHx8fHx8fHx8MTcyNDY2OTU3OXw&amp;ixlib=rb-4.0.3&amp;q=80&amp;w=1080"
+                      class="thq-img-ratio-4-3 features11-feature2-image"
+                    />
+                    <div class="features11-content3 thq-flex-column">
+                      <h3>
+                        <fragment class="about-fragment30">
+                          <span class="about-text34 thq-heading-3">
+                            Athleisure Collection
+                          </span>
+                        </fragment>
+                      </h3>
+                      <span>
+                        <fragment class="about-fragment35">
+                          <span class="about-text39 thq-body-small">
+                            Stay stylish and comfortable with our versatile
+                            athleisure collection perfect for any occasion.
+                          </span>
+                        </fragment>
+                      </span>
+                    </div>
+                  </div>
+                  <div class="features11-feature3 thq-flex-column">
+                    <img
+                      alt="Fashion Trends Image"
+                      src="https://images.unsplash.com/photo-1660032110824-417ffd01d7fc?crop=entropy&amp;cs=tinysrgb&amp;fit=max&amp;fm=jpg&amp;ixid=M3w5MTMyMXwwfDF8cmFuZG9tfHx8fHx8fHx8MTcyNDY2OTU3OXw&amp;ixlib=rb-4.0.3&amp;q=80&amp;w=1080"
+                      class="thq-img-ratio-4-3 features11-feature3-image"
+                    />
+                    <div class="features11-content4 thq-flex-column">
+                      <h3>
+                        <fragment class="about-fragment31">
+                          <span class="about-text35 thq-heading-3">
+                            Latest Fashion Trends
+                          </span>
+                        </fragment>
+                      </h3>
+                      <span>
+                        <fragment class="about-fragment36">
+                          <span class="about-text40 thq-body-small">
+                            Be the first to rock the latest fashion trends with
+                            our curated selection of must-have items.
+                          </span>
+                        </fragment>
+                      </span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="features11-actions">
+                <button class="thq-button-filled features11-button1">
+                  <span>
+                    <fragment class="about-fragment27">
+                      <span class="about-text31 thq-body-small">Shop Now</span>
+                    </fragment>
+                  </span>
+                </button>
+                <button class="thq-button-outline features11-button2">
+                  <span>
+                    <fragment class="about-fragment32">
+                      <span class="about-text36 thq-body-small">
+                        Explore More
+                      </span>
+                    </fragment>
+                  </span>
+                </button>
+              </div>
+            </div>
+          </div>
+        </features11-wrapper>
+        <team12-wrapper class="team12-wrapper">
+          <!--Team12 component-->
+          <div class="thq-section-padding root-class-name team12-team8">
+            <div class="team12-max-width thq-section-max-width">
+              <div class="team12-section-title">
+                <div class="team12-content10">
+                  <h2>
+                    <fragment class="about-fragment43">
+                      <span class="about-text47 thq-heading-2">
+                        <span>DISPECABLES</span>
+                        <br />
+                      </span>
+                    </fragment>
+                  </h2>
+                </div>
+              </div>
+              <div
+                data-thq="slider"
+                data-loop="true"
+                data-autoplay="true"
+                data-navigation="true"
+                data-pagination="true"
+                class="team12-slider1 swiper"
+              >
+                <div data-thq="slider-wrapper" class="swiper-wrapper">
+                  <div
+                    data-thq="slider-slide"
+                    class="team12-slider-slide1 swiper-slide"
+                  >
+                    <div class="team12-card10">
+                      <img
+                        alt="Image of Ava Rodriguez, Marketing Specialist at STYFIT"
+                        src="{% static 'public/khusi-1400w.jpg' %}"
+                        class="team12-placeholder-image10 thq-img-ratio-1-1 thq-img-round"
+                      />
+                      <div class="team12-content11">
+                        <div class="team12-title10">
+                          <span>
+                            <fragment class="about-fragment39">
+                              <span class="about-text43 thq-body-small">
+                                KHUSI
+                              </span>
+                            </fragment>
+                          </span>
+                        </div>
+                      </div>
+                      <div class="team12-social-icons10">
+                        <svg
+                          viewBox="0 0 877.7142857142857 1024"
+                          class="thq-icon-small"
+                        >
+                          <path
+                            d="M135.429 808h132v-396.571h-132v396.571zM276 289.143c-0.571-38.857-28.571-68.571-73.714-68.571s-74.857 29.714-74.857 68.571c0 37.714 28.571 68.571 73.143 68.571h0.571c46.286 0 74.857-30.857 74.857-68.571zM610.286 808h132v-227.429c0-121.714-65.143-178.286-152-178.286-70.857 0-102.286 39.429-119.429 66.857h1.143v-57.714h-132s1.714 37.143 0 396.571v0h132v-221.714c0-11.429 0.571-23.429 4-32 9.714-23.429 31.429-48 68-48 47.429 0 66.286 36 66.286 89.714v212zM877.714 237.714v548.571c0 90.857-73.714 164.571-164.571 164.571h-548.571c-90.857 0-164.571-73.714-164.571-164.571v-548.571c0-90.857 73.714-164.571 164.571-164.571h548.571c90.857 0 164.571 73.714 164.571 164.571z"
+                          ></path></svg
+                        ><svg
+                          viewBox="0 0 950.8571428571428 1024"
+                          class="thq-icon-small"
+                        >
+                          <path
+                            d="M925.714 233.143c-25.143 36.571-56.571 69.143-92.571 95.429 0.571 8 0.571 16 0.571 24 0 244-185.714 525.143-525.143 525.143-104.571 0-201.714-30.286-283.429-82.857 14.857 1.714 29.143 2.286 44.571 2.286 86.286 0 165.714-29.143 229.143-78.857-81.143-1.714-149.143-54.857-172.571-128 11.429 1.714 22.857 2.857 34.857 2.857 16.571 0 33.143-2.286 48.571-6.286-84.571-17.143-148-91.429-148-181.143v-2.286c24.571 13.714 53.143 22.286 83.429 23.429-49.714-33.143-82.286-89.714-82.286-153.714 0-34.286 9.143-65.714 25.143-93.143 90.857 112 227.429 185.143 380.571 193.143-2.857-13.714-4.571-28-4.571-42.286 0-101.714 82.286-184.571 184.571-184.571 53.143 0 101.143 22.286 134.857 58.286 41.714-8 81.714-23.429 117.143-44.571-13.714 42.857-42.857 78.857-81.143 101.714 37.143-4 73.143-14.286 106.286-28.571z"
+                          ></path>
+                        </svg>
+                      </div>
+                    </div>
+                    <div class="team12-card11">
+                      <img
+                        alt="Image of Noah Patel, Product Manager at STYFIT"
+                        src="{% static 'public/mansi-1400w.jpg' %}"
+                        class="team12-placeholder-image11 thq-img-ratio-1-1 thq-img-round"
+                      />
+                      <div class="team12-content12">
+                        <div class="team12-title11">
+                          <span>
+                            <fragment class="about-fragment40">
+                              <span class="about-text44 thq-body-small">
+                                MANSI
+                              </span>
+                            </fragment>
+                          </span>
+                        </div>
+                      </div>
+                      <div class="team12-social-icons11">
+                        <svg
+                          viewBox="0 0 877.7142857142857 1024"
+                          class="thq-icon-small"
+                        >
+                          <path
+                            d="M135.429 808h132v-396.571h-132v396.571zM276 289.143c-0.571-38.857-28.571-68.571-73.714-68.571s-74.857 29.714-74.857 68.571c0 37.714 28.571 68.571 73.143 68.571h0.571c46.286 0 74.857-30.857 74.857-68.571zM610.286 808h132v-227.429c0-121.714-65.143-178.286-152-178.286-70.857 0-102.286 39.429-119.429 66.857h1.143v-57.714h-132s1.714 37.143 0 396.571v0h132v-221.714c0-11.429 0.571-23.429 4-32 9.714-23.429 31.429-48 68-48 47.429 0 66.286 36 66.286 89.714v212zM877.714 237.714v548.571c0 90.857-73.714 164.571-164.571 164.571h-548.571c-90.857 0-164.571-73.714-164.571-164.571v-548.571c0-90.857 73.714-164.571 164.571-164.571h548.571c90.857 0 164.571 73.714 164.571 164.571z"
+                          ></path></svg
+                        ><svg
+                          viewBox="0 0 950.8571428571428 1024"
+                          class="thq-icon-small"
+                        >
+                          <path
+                            d="M925.714 233.143c-25.143 36.571-56.571 69.143-92.571 95.429 0.571 8 0.571 16 0.571 24 0 244-185.714 525.143-525.143 525.143-104.571 0-201.714-30.286-283.429-82.857 14.857 1.714 29.143 2.286 44.571 2.286 86.286 0 165.714-29.143 229.143-78.857-81.143-1.714-149.143-54.857-172.571-128 11.429 1.714 22.857 2.857 34.857 2.857 16.571 0 33.143-2.286 48.571-6.286-84.571-17.143-148-91.429-148-181.143v-2.286c24.571 13.714 53.143 22.286 83.429 23.429-49.714-33.143-82.286-89.714-82.286-153.714 0-34.286 9.143-65.714 25.143-93.143 90.857 112 227.429 185.143 380.571 193.143-2.857-13.714-4.571-28-4.571-42.286 0-101.714 82.286-184.571 184.571-184.571 53.143 0 101.143 22.286 134.857 58.286 41.714-8 81.714-23.429 117.143-44.571-13.714 42.857-42.857 78.857-81.143 101.714 37.143-4 73.143-14.286 106.286-28.571z"
+                          ></path>
+                        </svg>
+                      </div>
+                    </div>
+                  </div>
+                  <div
+                    data-thq="slider-slide"
+                    class="team12-slider-slide2 swiper-slide"
+                  >
+                    <div class="team12-card12">
+                      <img
+                        alt="Member Alt"
+                        src="{% static 'public/vikas-1400w.jpg' %}"
+                        class="team12-placeholder-image12 thq-img-ratio-1-1 thq-img-round"
+                      />
+                      <div class="team12-content13">
+                        <div class="team12-title12">
+                          <span>
+                            <fragment class="about-fragment41">
+                              <span class="about-text45 thq-body-small">
+                                Default value
+                              </span>
+                            </fragment>
+                          </span>
+                          <span>
+                            <fragment class="about-fragment48">
+                              <span class="about-text54 thq-body-small">
+                                Default value
+                              </span>
+                            </fragment>
+                          </span>
+                        </div>
+                        <span>
+                          <fragment class="about-fragment54">
+                            <span class="about-text60 thq-body-small">
+                              VIKAS
+                            </span>
+                          </fragment>
+                        </span>
+                      </div>
+                      <div class="team12-social-icons12">
+                        <svg
+                          viewBox="0 0 877.7142857142857 1024"
+                          class="thq-icon-small"
+                        >
+                          <path
+                            d="M135.429 808h132v-396.571h-132v396.571zM276 289.143c-0.571-38.857-28.571-68.571-73.714-68.571s-74.857 29.714-74.857 68.571c0 37.714 28.571 68.571 73.143 68.571h0.571c46.286 0 74.857-30.857 74.857-68.571zM610.286 808h132v-227.429c0-121.714-65.143-178.286-152-178.286-70.857 0-102.286 39.429-119.429 66.857h1.143v-57.714h-132s1.714 37.143 0 396.571v0h132v-221.714c0-11.429 0.571-23.429 4-32 9.714-23.429 31.429-48 68-48 47.429 0 66.286 36 66.286 89.714v212zM877.714 237.714v548.571c0 90.857-73.714 164.571-164.571 164.571h-548.571c-90.857 0-164.571-73.714-164.571-164.571v-548.571c0-90.857 73.714-164.571 164.571-164.571h548.571c90.857 0 164.571 73.714 164.571 164.571z"
+                          ></path></svg
+                        ><svg
+                          viewBox="0 0 950.8571428571428 1024"
+                          class="thq-icon-small"
+                        >
+                          <path
+                            d="M925.714 233.143c-25.143 36.571-56.571 69.143-92.571 95.429 0.571 8 0.571 16 0.571 24 0 244-185.714 525.143-525.143 525.143-104.571 0-201.714-30.286-283.429-82.857 14.857 1.714 29.143 2.286 44.571 2.286 86.286 0 165.714-29.143 229.143-78.857-81.143-1.714-149.143-54.857-172.571-128 11.429 1.714 22.857 2.857 34.857 2.857 16.571 0 33.143-2.286 48.571-6.286-84.571-17.143-148-91.429-148-181.143v-2.286c24.571 13.714 53.143 22.286 83.429 23.429-49.714-33.143-82.286-89.714-82.286-153.714 0-34.286 9.143-65.714 25.143-93.143 90.857 112 227.429 185.143 380.571 193.143-2.857-13.714-4.571-28-4.571-42.286 0-101.714 82.286-184.571 184.571-184.571 53.143 0 101.143 22.286 134.857 58.286 41.714-8 81.714-23.429 117.143-44.571-13.714 42.857-42.857 78.857-81.143 101.714 37.143-4 73.143-14.286 106.286-28.571z"
+                          ></path>
+                        </svg>
+                      </div>
+                    </div>
+                    <div class="team12-card13">
+                      <img
+                        alt="Member Alt"
+                        src="{% static 'public/whatsapp%20image%202024-02-10%20at%2010.23.53_529f39e3-1400w.jpg' %}"
+                        class="team12-placeholder-image13 thq-img-ratio-1-1 thq-img-round"
+                      />
+                      <div class="team12-content14">
+                        <div class="team12-title13">
+                          <span>
+                            <fragment class="about-fragment42">
+                              <span class="about-text46 thq-body-small">
+                                Default value
+                              </span>
+                            </fragment>
+                          </span>
+                          <span>
+                            <fragment class="about-fragment49">
+                              <span class="about-text55 thq-body-small">
+                                Default value
+                              </span>
+                            </fragment>
+                          </span>
+                        </div>
+                        <span>
+                          <fragment class="about-fragment55">
+                            <span class="about-text61 thq-body-small">
+                              KASHISH
+                            </span>
+                          </fragment>
+                        </span>
+                      </div>
+                      <div class="team12-social-icons13">
+                        <svg
+                          viewBox="0 0 877.7142857142857 1024"
+                          class="thq-icon-small"
+                        >
+                          <path
+                            d="M135.429 808h132v-396.571h-132v396.571zM276 289.143c-0.571-38.857-28.571-68.571-73.714-68.571s-74.857 29.714-74.857 68.571c0 37.714 28.571 68.571 73.143 68.571h0.571c46.286 0 74.857-30.857 74.857-68.571zM610.286 808h132v-227.429c0-121.714-65.143-178.286-152-178.286-70.857 0-102.286 39.429-119.429 66.857h1.143v-57.714h-132s1.714 37.143 0 396.571v0h132v-221.714c0-11.429 0.571-23.429 4-32 9.714-23.429 31.429-48 68-48 47.429 0 66.286 36 66.286 89.714v212zM877.714 237.714v548.571c0 90.857-73.714 164.571-164.571 164.571h-548.571c-90.857 0-164.571-73.714-164.571-164.571v-548.571c0-90.857 73.714-164.571 164.571-164.571h548.571c90.857 0 164.571 73.714 164.571 164.571z"
+                          ></path></svg
+                        ><svg
+                          viewBox="0 0 950.8571428571428 1024"
+                          class="thq-icon-small"
+                        >
+                          <path
+                            d="M925.714 233.143c-25.143 36.571-56.571 69.143-92.571 95.429 0.571 8 0.571 16 0.571 24 0 244-185.714 525.143-525.143 525.143-104.571 0-201.714-30.286-283.429-82.857 14.857 1.714 29.143 2.286 44.571 2.286 86.286 0 165.714-29.143 229.143-78.857-81.143-1.714-149.143-54.857-172.571-128 11.429 1.714 22.857 2.857 34.857 2.857 16.571 0 33.143-2.286 48.571-6.286-84.571-17.143-148-91.429-148-181.143v-2.286c24.571 13.714 53.143 22.286 83.429 23.429-49.714-33.143-82.286-89.714-82.286-153.714 0-34.286 9.143-65.714 25.143-93.143 90.857 112 227.429 185.143 380.571 193.143-2.857-13.714-4.571-28-4.571-42.286 0-101.714 82.286-184.571 184.571-184.571 53.143 0 101.143 22.286 134.857 58.286 41.714-8 81.714-23.429 117.143-44.571-13.714 42.857-42.857 78.857-81.143 101.714 37.143-4 73.143-14.286 106.286-28.571z"
+                          ></path>
+                        </svg>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div
+                  data-thq="slider-pagination"
+                  class="team12-slider-pagination1 swiper-pagination swiper-pagination-bullets swiper-pagination-horizontal"
+                >
+                  <div
+                    data-thq="slider-pagination-bullet"
+                    class="swiper-pagination-bullet"
+                  ></div>
+                  <div
+                    data-thq="slider-pagination-bullet"
+                    class="swiper-pagination-bullet"
+                  ></div>
+                </div>
+                <div
+                  data-thq="slider-button-prev"
+                  class="swiper-button-prev"
+                ></div>
+                <div
+                  data-thq="slider-button-next"
+                  class="swiper-button-next"
+                ></div>
+              </div>
+              <div
+                data-thq="slider"
+                data-navigation="true"
+                data-pagination="true"
+                class="team12-slider2 swiper"
+              >
+                <div data-thq="slider-wrapper" class="swiper-wrapper">
+                  <div
+                    data-thq="slider-slide"
+                    class="team12-slider-slide3 swiper-slide"
+                  >
+                    <div class="team12-card14">
+                      <img
+                        alt="Image of Sophia Lee, Founder &amp; CEO of STYFIT"
+                        src="{% static 'public/vikas-1400w.jpg' %}"
+                        class="team12-placeholder-image14 thq-img-ratio-1-1 thq-img-round"
+                      />
+                      <div class="team12-content15">
+                        <div class="team12-title14">
+                          <span>
+                            <span>Full name</span>
+                            <fragment class="about-fragment37">
+                              <span class="about-text41 thq-body-small">
+                                VIKAS
+                              </span>
+                            </fragment>
+                          </span>
+                          <span>
+                            <span>Job title</span>
+                            <fragment class="about-fragment44">
+                              <span class="about-text50 thq-body-small">
+                                Default value
+                              </span>
+                            </fragment>
+                          </span>
+                        </div>
+                        <span>
+                          <span>
+                            Lorem ipsum dolor sit amet, consectetur adipiscing
+                            elit. Suspendisse varius enim in eros elementum
+                            tristique.
+                          </span>
+                          <fragment class="about-fragment50">
+                            <span class="about-text56 thq-body-small">
+                              Default value
+                            </span>
+                          </fragment>
+                        </span>
+                      </div>
+                      <div class="team12-social-icons14">
+                        <svg
+                          viewBox="0 0 877.7142857142857 1024"
+                          class="thq-icon-small"
+                        >
+                          <path
+                            d="M135.429 808h132v-396.571h-132v396.571zM276 289.143c-0.571-38.857-28.571-68.571-73.714-68.571s-74.857 29.714-74.857 68.571c0 37.714 28.571 68.571 73.143 68.571h0.571c46.286 0 74.857-30.857 74.857-68.571zM610.286 808h132v-227.429c0-121.714-65.143-178.286-152-178.286-70.857 0-102.286 39.429-119.429 66.857h1.143v-57.714h-132s1.714 37.143 0 396.571v0h132v-221.714c0-11.429 0.571-23.429 4-32 9.714-23.429 31.429-48 68-48 47.429 0 66.286 36 66.286 89.714v212zM877.714 237.714v548.571c0 90.857-73.714 164.571-164.571 164.571h-548.571c-90.857 0-164.571-73.714-164.571-164.571v-548.571c0-90.857 73.714-164.571 164.571-164.571h548.571c90.857 0 164.571 73.714 164.571 164.571z"
+                          ></path></svg
+                        ><svg
+                          viewBox="0 0 950.8571428571428 1024"
+                          class="thq-icon-small"
+                        >
+                          <path
+                            d="M925.714 233.143c-25.143 36.571-56.571 69.143-92.571 95.429 0.571 8 0.571 16 0.571 24 0 244-185.714 525.143-525.143 525.143-104.571 0-201.714-30.286-283.429-82.857 14.857 1.714 29.143 2.286 44.571 2.286 86.286 0 165.714-29.143 229.143-78.857-81.143-1.714-149.143-54.857-172.571-128 11.429 1.714 22.857 2.857 34.857 2.857 16.571 0 33.143-2.286 48.571-6.286-84.571-17.143-148-91.429-148-181.143v-2.286c24.571 13.714 53.143 22.286 83.429 23.429-49.714-33.143-82.286-89.714-82.286-153.714 0-34.286 9.143-65.714 25.143-93.143 90.857 112 227.429 185.143 380.571 193.143-2.857-13.714-4.571-28-4.571-42.286 0-101.714 82.286-184.571 184.571-184.571 53.143 0 101.143 22.286 134.857 58.286 41.714-8 81.714-23.429 117.143-44.571-13.714 42.857-42.857 78.857-81.143 101.714 37.143-4 73.143-14.286 106.286-28.571z"
+                          ></path>
+                        </svg>
+                      </div>
+                    </div>
+                  </div>
+                  <div
+                    data-thq="slider-slide"
+                    class="team12-slider-slide4 swiper-slide"
+                  >
+                    <div class="team12-card15">
+                      <img
+                        alt="Image of Ethan Chen, Head of Design at STYFIT"
+                        src="{% static 'public/whatsapp%20image%202024-02-10%20at%2010.23.53_529f39e3-1400w.jpg' %}"
+                        class="team12-placeholder-image15 thq-img-ratio-1-1 thq-img-round"
+                      />
+                      <div class="team12-content16">
+                        <div class="team12-title15">
+                          <span>Full name</span>
+                          <span>Job title</span>
+                        </div>
+                        <span>
+                          <span>
+                            Lorem ipsum dolor sit amet, consectetur adipiscing
+                            elit. Suspendisse varius enim in eros elementum
+                            tristique.
+                          </span>
+                          <fragment class="about-fragment51">
+                            <span class="about-text57 thq-body-small">
+                              Default value
+                            </span>
+                          </fragment>
+                        </span>
+                      </div>
+                      <div class="team12-social-icons15">
+                        <svg
+                          viewBox="0 0 877.7142857142857 1024"
+                          class="thq-icon-small"
+                        >
+                          <path
+                            d="M135.429 808h132v-396.571h-132v396.571zM276 289.143c-0.571-38.857-28.571-68.571-73.714-68.571s-74.857 29.714-74.857 68.571c0 37.714 28.571 68.571 73.143 68.571h0.571c46.286 0 74.857-30.857 74.857-68.571zM610.286 808h132v-227.429c0-121.714-65.143-178.286-152-178.286-70.857 0-102.286 39.429-119.429 66.857h1.143v-57.714h-132s1.714 37.143 0 396.571v0h132v-221.714c0-11.429 0.571-23.429 4-32 9.714-23.429 31.429-48 68-48 47.429 0 66.286 36 66.286 89.714v212zM877.714 237.714v548.571c0 90.857-73.714 164.571-164.571 164.571h-548.571c-90.857 0-164.571-73.714-164.571-164.571v-548.571c0-90.857 73.714-164.571 164.571-164.571h548.571c90.857 0 164.571 73.714 164.571 164.571z"
+                          ></path></svg
+                        ><svg
+                          viewBox="0 0 950.8571428571428 1024"
+                          class="thq-icon-small"
+                        >
+                          <path
+                            d="M925.714 233.143c-25.143 36.571-56.571 69.143-92.571 95.429 0.571 8 0.571 16 0.571 24 0 244-185.714 525.143-525.143 525.143-104.571 0-201.714-30.286-283.429-82.857 14.857 1.714 29.143 2.286 44.571 2.286 86.286 0 165.714-29.143 229.143-78.857-81.143-1.714-149.143-54.857-172.571-128 11.429 1.714 22.857 2.857 34.857 2.857 16.571 0 33.143-2.286 48.571-6.286-84.571-17.143-148-91.429-148-181.143v-2.286c24.571 13.714 53.143 22.286 83.429 23.429-49.714-33.143-82.286-89.714-82.286-153.714 0-34.286 9.143-65.714 25.143-93.143 90.857 112 227.429 185.143 380.571 193.143-2.857-13.714-4.571-28-4.571-42.286 0-101.714 82.286-184.571 184.571-184.571 53.143 0 101.143 22.286 134.857 58.286 41.714-8 81.714-23.429 117.143-44.571-13.714 42.857-42.857 78.857-81.143 101.714 37.143-4 73.143-14.286 106.286-28.571z"
+                          ></path>
+                        </svg>
+                      </div>
+                    </div>
+                  </div>
+                  <div
+                    data-thq="slider-slide"
+                    class="team12-slider-slide5 swiper-slide"
+                  >
+                    <div class="team12-card16">
+                      <img
+                        alt="Image of Ava Rodriguez, Marketing Specialist at STYFIT"
+                        src="{% static 'public/khusi-1400w.jpg' %}"
+                        class="team12-placeholder-image16 thq-img-ratio-1-1 thq-img-round"
+                      />
+                      <div class="team12-content17">
+                        <div class="team12-title16">
+                          <span>
+                            <span>Full name</span>
+                            <fragment class="about-fragment39">
+                              <span class="about-text43 thq-body-small">
+                                KHUSI
+                              </span>
+                            </fragment>
+                          </span>
+                          <span>
+                            <span>Job title</span>
+                            <fragment class="about-fragment46">
+                              <span class="about-text52 thq-body-small">
+                                Default value
+                              </span>
+                            </fragment>
+                          </span>
+                        </div>
+                        <span>
+                          <span>
+                            Lorem ipsum dolor sit amet, consectetur adipiscing
+                            elit. Suspendisse varius enim in eros elementum
+                            tristique.
+                          </span>
+                          <fragment class="about-fragment52">
+                            <span class="about-text58 thq-body-small">
+                              Default value
+                            </span>
+                          </fragment>
+                        </span>
+                      </div>
+                      <div class="team12-social-icons16">
+                        <svg
+                          viewBox="0 0 877.7142857142857 1024"
+                          class="thq-icon-small"
+                        >
+                          <path
+                            d="M135.429 808h132v-396.571h-132v396.571zM276 289.143c-0.571-38.857-28.571-68.571-73.714-68.571s-74.857 29.714-74.857 68.571c0 37.714 28.571 68.571 73.143 68.571h0.571c46.286 0 74.857-30.857 74.857-68.571zM610.286 808h132v-227.429c0-121.714-65.143-178.286-152-178.286-70.857 0-102.286 39.429-119.429 66.857h1.143v-57.714h-132s1.714 37.143 0 396.571v0h132v-221.714c0-11.429 0.571-23.429 4-32 9.714-23.429 31.429-48 68-48 47.429 0 66.286 36 66.286 89.714v212zM877.714 237.714v548.571c0 90.857-73.714 164.571-164.571 164.571h-548.571c-90.857 0-164.571-73.714-164.571-164.571v-548.571c0-90.857 73.714-164.571 164.571-164.571h548.571c90.857 0 164.571 73.714 164.571 164.571z"
+                          ></path></svg
+                        ><svg
+                          viewBox="0 0 950.8571428571428 1024"
+                          class="thq-icon-small"
+                        >
+                          <path
+                            d="M925.714 233.143c-25.143 36.571-56.571 69.143-92.571 95.429 0.571 8 0.571 16 0.571 24 0 244-185.714 525.143-525.143 525.143-104.571 0-201.714-30.286-283.429-82.857 14.857 1.714 29.143 2.286 44.571 2.286 86.286 0 165.714-29.143 229.143-78.857-81.143-1.714-149.143-54.857-172.571-128 11.429 1.714 22.857 2.857 34.857 2.857 16.571 0 33.143-2.286 48.571-6.286-84.571-17.143-148-91.429-148-181.143v-2.286c24.571 13.714 53.143 22.286 83.429 23.429-49.714-33.143-82.286-89.714-82.286-153.714 0-34.286 9.143-65.714 25.143-93.143 90.857 112 227.429 185.143 380.571 193.143-2.857-13.714-4.571-28-4.571-42.286 0-101.714 82.286-184.571 184.571-184.571 53.143 0 101.143 22.286 134.857 58.286 41.714-8 81.714-23.429 117.143-44.571-13.714 42.857-42.857 78.857-81.143 101.714 37.143-4 73.143-14.286 106.286-28.571z"
+                          ></path>
+                        </svg>
+                      </div>
+                    </div>
+                  </div>
+                  <div
+                    data-thq="slider-slide"
+                    class="team12-slider-slide6 swiper-slide"
+                  >
+                    <div class="team12-card17">
+                      <img
+                        alt="Image of Noah Patel, Product Manager at STYFIT"
+                        src="{% static 'public/mansi-1400w.jpg' %}"
+                        class="team12-placeholder-image17 thq-img-ratio-1-1 thq-img-round"
+                      />
+                      <div class="team12-content18">
+                        <div class="team12-title17">
+                          <span>
+                            <span>Full name</span>
+                            <fragment class="about-fragment40">
+                              <span class="about-text44 thq-body-small">
+                                MANSI
+                              </span>
+                            </fragment>
+                          </span>
+                          <span>
+                            <span>Job title</span>
+                            <fragment class="about-fragment47">
+                              <span class="about-text53 thq-body-small">
+                                Default value
+                              </span>
+                            </fragment>
+                          </span>
+                        </div>
+                        <span>
+                          Lorem ipsum dolor sit amet, consectetur adipiscing
+                          elit. Suspendisse varius enim in eros elementum
+                          tristique.
+                        </span>
+                      </div>
+                      <div class="team12-social-icons17">
+                        <svg
+                          viewBox="0 0 877.7142857142857 1024"
+                          class="thq-icon-small"
+                        >
+                          <path
+                            d="M135.429 808h132v-396.571h-132v396.571zM276 289.143c-0.571-38.857-28.571-68.571-73.714-68.571s-74.857 29.714-74.857 68.571c0 37.714 28.571 68.571 73.143 68.571h0.571c46.286 0 74.857-30.857 74.857-68.571zM610.286 808h132v-227.429c0-121.714-65.143-178.286-152-178.286-70.857 0-102.286 39.429-119.429 66.857h1.143v-57.714h-132s1.714 37.143 0 396.571v0h132v-221.714c0-11.429 0.571-23.429 4-32 9.714-23.429 31.429-48 68-48 47.429 0 66.286 36 66.286 89.714v212zM877.714 237.714v548.571c0 90.857-73.714 164.571-164.571 164.571h-548.571c-90.857 0-164.571-73.714-164.571-164.571v-548.571c0-90.857 73.714-164.571 164.571-164.571h548.571c90.857 0 164.571 73.714 164.571 164.571z"
+                          ></path></svg
+                        ><svg
+                          viewBox="0 0 950.8571428571428 1024"
+                          class="thq-icon-small"
+                        >
+                          <path
+                            d="M925.714 233.143c-25.143 36.571-56.571 69.143-92.571 95.429 0.571 8 0.571 16 0.571 24 0 244-185.714 525.143-525.143 525.143-104.571 0-201.714-30.286-283.429-82.857 14.857 1.714 29.143 2.286 44.571 2.286 86.286 0 165.714-29.143 229.143-78.857-81.143-1.714-149.143-54.857-172.571-128 11.429 1.714 22.857 2.857 34.857 2.857 16.571 0 33.143-2.286 48.571-6.286-84.571-17.143-148-91.429-148-181.143v-2.286c24.571 13.714 53.143 22.286 83.429 23.429-49.714-33.143-82.286-89.714-82.286-153.714 0-34.286 9.143-65.714 25.143-93.143 90.857 112 227.429 185.143 380.571 193.143-2.857-13.714-4.571-28-4.571-42.286 0-101.714 82.286-184.571 184.571-184.571 53.143 0 101.143 22.286 134.857 58.286 41.714-8 81.714-23.429 117.143-44.571-13.714 42.857-42.857 78.857-81.143 101.714 37.143-4 73.143-14.286 106.286-28.571z"
+                          ></path>
+                        </svg>
+                      </div>
+                    </div>
+                  </div>
+                  <div
+                    data-thq="slider-slide"
+                    class="team12-slider-slide7 swiper-slide"
+                  >
+                    <div class="team12-card18">
+                      <img
+                        alt="Member Alt"
+                        src="{% static 'public/vikas-1400w.jpg' %}"
+                        class="team12-placeholder-image18 thq-img-ratio-1-1 thq-img-round"
+                      />
+                      <div class="team12-content19">
+                        <div class="team12-title18">
+                          <span>Full name</span>
+                          <span>Job title</span>
+                        </div>
+                        <span>
+                          <span>
+                            Lorem ipsum dolor sit amet, consectetur adipiscing
+                            elit. Suspendisse varius enim in eros elementum
+                            tristique.
+                          </span>
+                          <fragment class="about-fragment54">
+                            <span class="about-text60 thq-body-small">
+                              VIKAS
+                            </span>
+                          </fragment>
+                        </span>
+                      </div>
+                      <div class="team12-social-icons18">
+                        <svg
+                          viewBox="0 0 877.7142857142857 1024"
+                          class="thq-icon-small"
+                        >
+                          <path
+                            d="M135.429 808h132v-396.571h-132v396.571zM276 289.143c-0.571-38.857-28.571-68.571-73.714-68.571s-74.857 29.714-74.857 68.571c0 37.714 28.571 68.571 73.143 68.571h0.571c46.286 0 74.857-30.857 74.857-68.571zM610.286 808h132v-227.429c0-121.714-65.143-178.286-152-178.286-70.857 0-102.286 39.429-119.429 66.857h1.143v-57.714h-132s1.714 37.143 0 396.571v0h132v-221.714c0-11.429 0.571-23.429 4-32 9.714-23.429 31.429-48 68-48 47.429 0 66.286 36 66.286 89.714v212zM877.714 237.714v548.571c0 90.857-73.714 164.571-164.571 164.571h-548.571c-90.857 0-164.571-73.714-164.571-164.571v-548.571c0-90.857 73.714-164.571 164.571-164.571h548.571c90.857 0 164.571 73.714 164.571 164.571z"
+                          ></path></svg
+                        ><svg
+                          viewBox="0 0 950.8571428571428 1024"
+                          class="thq-icon-small"
+                        >
+                          <path
+                            d="M925.714 233.143c-25.143 36.571-56.571 69.143-92.571 95.429 0.571 8 0.571 16 0.571 24 0 244-185.714 525.143-525.143 525.143-104.571 0-201.714-30.286-283.429-82.857 14.857 1.714 29.143 2.286 44.571 2.286 86.286 0 165.714-29.143 229.143-78.857-81.143-1.714-149.143-54.857-172.571-128 11.429 1.714 22.857 2.857 34.857 2.857 16.571 0 33.143-2.286 48.571-6.286-84.571-17.143-148-91.429-148-181.143v-2.286c24.571 13.714 53.143 22.286 83.429 23.429-49.714-33.143-82.286-89.714-82.286-153.714 0-34.286 9.143-65.714 25.143-93.143 90.857 112 227.429 185.143 380.571 193.143-2.857-13.714-4.571-28-4.571-42.286 0-101.714 82.286-184.571 184.571-184.571 53.143 0 101.143 22.286 134.857 58.286 41.714-8 81.714-23.429 117.143-44.571-13.714 42.857-42.857 78.857-81.143 101.714 37.143-4 73.143-14.286 106.286-28.571z"
+                          ></path>
+                        </svg>
+                      </div>
+                    </div>
+                  </div>
+                  <div
+                    data-thq="slider-slide"
+                    class="team12-slider-slide8 swiper-slide"
+                  >
+                    <div class="team12-card19">
+                      <img
+                        alt="Member Alt"
+                        src="{% static 'public/whatsapp%20image%202024-02-10%20at%2010.23.53_529f39e3-1400w.jpg' %}"
+                        class="team12-placeholder-image19 thq-img-ratio-1-1 thq-img-round"
+                      />
+                      <div class="team12-content20">
+                        <div class="team12-title19">
+                          <span>
+                            <span>Full name</span>
+                            <fragment class="about-fragment42">
+                              <span class="about-text46 thq-body-small">
+                                Default value
+                              </span>
+                            </fragment>
+                          </span>
+                          <span>Job title</span>
+                        </div>
+                        <span>
+                          <span>
+                            Lorem ipsum dolor sit amet, consectetur adipiscing
+                            elit. Suspendisse varius enim in eros elementum
+                            tristique.
+                          </span>
+                          <fragment class="about-fragment55">
+                            <span class="about-text61 thq-body-small">
+                              KASHISH
+                            </span>
+                          </fragment>
+                        </span>
+                      </div>
+                      <div class="team12-social-icons19">
+                        <svg
+                          viewBox="0 0 877.7142857142857 1024"
+                          class="thq-icon-small"
+                        >
+                          <path
+                            d="M135.429 808h132v-396.571h-132v396.571zM276 289.143c-0.571-38.857-28.571-68.571-73.714-68.571s-74.857 29.714-74.857 68.571c0 37.714 28.571 68.571 73.143 68.571h0.571c46.286 0 74.857-30.857 74.857-68.571zM610.286 808h132v-227.429c0-121.714-65.143-178.286-152-178.286-70.857 0-102.286 39.429-119.429 66.857h1.143v-57.714h-132s1.714 37.143 0 396.571v0h132v-221.714c0-11.429 0.571-23.429 4-32 9.714-23.429 31.429-48 68-48 47.429 0 66.286 36 66.286 89.714v212zM877.714 237.714v548.571c0 90.857-73.714 164.571-164.571 164.571h-548.571c-90.857 0-164.571-73.714-164.571-164.571v-548.571c0-90.857 73.714-164.571 164.571-164.571h548.571c90.857 0 164.571 73.714 164.571 164.571z"
+                          ></path></svg
+                        ><svg
+                          viewBox="0 0 950.8571428571428 1024"
+                          class="thq-icon-small"
+                        >
+                          <path
+                            d="M925.714 233.143c-25.143 36.571-56.571 69.143-92.571 95.429 0.571 8 0.571 16 0.571 24 0 244-185.714 525.143-525.143 525.143-104.571 0-201.714-30.286-283.429-82.857 14.857 1.714 29.143 2.286 44.571 2.286 86.286 0 165.714-29.143 229.143-78.857-81.143-1.714-149.143-54.857-172.571-128 11.429 1.714 22.857 2.857 34.857 2.857 16.571 0 33.143-2.286 48.571-6.286-84.571-17.143-148-91.429-148-181.143v-2.286c24.571 13.714 53.143 22.286 83.429 23.429-49.714-33.143-82.286-89.714-82.286-153.714 0-34.286 9.143-65.714 25.143-93.143 90.857 112 227.429 185.143 380.571 193.143-2.857-13.714-4.571-28-4.571-42.286 0-101.714 82.286-184.571 184.571-184.571 53.143 0 101.143 22.286 134.857 58.286 41.714-8 81.714-23.429 117.143-44.571-13.714 42.857-42.857 78.857-81.143 101.714 37.143-4 73.143-14.286 106.286-28.571z"
+                          ></path>
+                        </svg>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div
+                  data-thq="slider-pagination"
+                  class="team12-slider-pagination2 swiper-pagination swiper-pagination-bullets swiper-pagination-horizontal"
+                >
+                  <div
+                    data-thq="slider-pagination-bullet"
+                    class="swiper-pagination-bullet swiper-pagination-bullet-active"
+                  ></div>
+                  <div
+                    data-thq="slider-pagination-bullet"
+                    class="swiper-pagination-bullet"
+                  ></div>
+                  <div
+                    data-thq="slider-pagination-bullet"
+                    class="swiper-pagination-bullet"
+                  ></div>
+                  <div
+                    data-thq="slider-pagination-bullet"
+                    class="swiper-pagination-bullet"
+                  ></div>
+                  <div
+                    data-thq="slider-pagination-bullet"
+                    class="swiper-pagination-bullet"
+                  ></div>
+                  <div
+                    data-thq="slider-pagination-bullet"
+                    class="swiper-pagination-bullet"
+                  ></div>
+                </div>
+                <div
+                  data-thq="slider-button-prev"
+                  class="swiper-button-prev"
+                ></div>
+                <div
+                  data-thq="slider-button-next"
+                  class="swiper-button-next"
+                ></div>
+              </div>
+            </div>
+          </div>
+        </team12-wrapper>
+        <footer6-wrapper class="footer6-wrapper">
+          <!--Footer6 component-->
+          <footer
+            id="Footer6"
+            class="footer6-container1 thq-section-padding root-class-name2"
+          >
+            <div class="footer6-max-width thq-section-max-width">
+              <div class="footer6-content">
+                <div class="footer6-newsletter">
+                  <span class="thq-body-small">
+                    Subscribe to our newsletter for the latest updates on new
+                    features and product releases.
+                  </span>
+                  <div class="footer6-actions">
+                    <div class="footer6-form">
+                      <div class="footer6-container2">
+                        <input
+                          type="email"
+                          placeholder="Enter your email"
+                          class="footer6-text-input thq-input"
+                        />
+                      </div>
+                      <button class="thq-button-outline footer6-button">
+                        <span>
+                          <fragment class="about-fragment66">
+                            <span class="about-text72 thq-body-small">
+                              Subscribe
+                            </span>
+                          </fragment>
+                        </span>
+                      </button>
+                    </div>
+                    <span>
+                      <fragment class="about-fragment67">
+                        <span class="about-text73 thq-body-small">
+                          Stay updated on our latest trends and promotions.
+                        </span>
+                      </fragment>
+                    </span>
+                  </div>
+                </div>
+                <div class="footer6-links">
+                  <div class="footer6-column1">
+                    <strong>
+                      <fragment class="about-fragment72">
+                        <span class="about-text78 thq-body-large">
+                          About Us
+                        </span>
+                      </fragment>
+                    </strong>
+                    <div class="footer6-footer-links1">
+                      <a
+                        href="https://example.com"
+                        target="_blank"
+                        rel="noreferrer noopener"
+                      >
+                        <fragment class="about-fragment56">
+                          <span class="about-text62 thq-body-small">
+                            About STYFIT
+                          </span>
+                        </fragment>
+                      </a>
+                      <a
+                        href="https://example.com"
+                        target="_blank"
+                        rel="noreferrer noopener"
+                      >
+                        <fragment class="about-fragment57">
+                          <span class="about-text63 thq-body-small">
+                            Our Team
+                          </span>
+                        </fragment>
+                      </a>
+                      <a
+                        href="https://example.com"
+                        target="_blank"
+                        rel="noreferrer noopener"
+                      >
+                        <fragment class="about-fragment58">
+                          <span class="about-text64 thq-body-small">
+                            Careers
+                          </span>
+                        </fragment>
+                      </a>
+                      <a
+                        href="https://example.com"
+                        target="_blank"
+                        rel="noreferrer noopener"
+                      >
+                        <fragment class="about-fragment59">
+                          <span class="about-text65 thq-body-small">Press</span>
+                        </fragment>
+                      </a>
+                      <a
+                        href="https://example.com"
+                        target="_blank"
+                        rel="noreferrer noopener"
+                      >
+                        <fragment class="about-fragment60">
+                          <span class="about-text66 thq-body-small">
+                            Contact Us
+                          </span>
+                        </fragment>
+                      </a>
+                    </div>
+                  </div>
+                  <div class="footer6-column2">
+                    <strong>
+                      <fragment class="about-fragment73">
+                        <span class="about-text79 thq-body-large">
+                          Customer Service
+                        </span>
+                      </fragment>
+                    </strong>
+                    <div class="footer6-footer-links2">
+                      <a
+                        href="https://example.com"
+                        target="_blank"
+                        rel="noreferrer noopener"
+                      >
+                        <fragment class="about-fragment61">
+                          <span class="about-text67 thq-body-small">FAQs</span>
+                        </fragment>
+                      </a>
+                      <a
+                        href="https://example.com"
+                        target="_blank"
+                        rel="noreferrer noopener"
+                      >
+                        <fragment class="about-fragment62">
+                          <span class="about-text68 thq-body-small">
+                            Shipping Information
+                          </span>
+                        </fragment>
+                      </a>
+                      <a
+                        href="https://example.com"
+                        target="_blank"
+                        rel="noreferrer noopener"
+                      >
+                        <fragment class="about-fragment63">
+                          <span class="about-text69 thq-body-small">
+                            Returns &amp; Exchanges
+                          </span>
+                        </fragment>
+                      </a>
+                      <a
+                        href="https://example.com"
+                        target="_blank"
+                        rel="noreferrer noopener"
+                      >
+                        <fragment class="about-fragment64">
+                          <span class="about-text70 thq-body-small">
+                            Size Guide
+                          </span>
+                        </fragment>
+                      </a>
+                      <a
+                        href="https://example.com"
+                        target="_blank"
+                        rel="noreferrer noopener"
+                      >
+                        <fragment class="about-fragment65">
+                          <span class="about-text71 thq-body-small">
+                            Track Your Order
+                          </span>
+                        </fragment>
+                      </a>
+                    </div>
+                  </div>
+                  <div class="footer6-column3">
+                    <strong>
+                      <fragment class="about-fragment74">
+                        <span class="about-text80 thq-body-large">
+                          Connect with Us
+                        </span>
+                      </fragment>
+                    </strong>
+                    <div class="footer6-social-links">
+                      <div class="footer6-link14">
+                        <svg
+                          viewBox="0 0 877.7142857142857 1024"
+                          class="thq-icon-small"
+                        >
+                          <path
+                            d="M713.143 73.143c90.857 0 164.571 73.714 164.571 164.571v548.571c0 90.857-73.714 164.571-164.571 164.571h-107.429v-340h113.714l17.143-132.571h-130.857v-84.571c0-38.286 10.286-64 65.714-64l69.714-0.571v-118.286c-12-1.714-53.714-5.143-101.714-5.143-101.143 0-170.857 61.714-170.857 174.857v97.714h-114.286v132.571h114.286v340h-304c-90.857 0-164.571-73.714-164.571-164.571v-548.571c0-90.857 73.714-164.571 164.571-164.571h548.571z"
+                          ></path>
+                        </svg>
+                        <span class="thq-body-small">Facebook</span>
+                      </div>
+                      <div class="footer6-link15">
+                        <svg
+                          viewBox="0 0 877.7142857142857 1024"
+                          class="thq-icon-small"
+                        >
+                          <path
+                            d="M585.143 512c0-80.571-65.714-146.286-146.286-146.286s-146.286 65.714-146.286 146.286 65.714 146.286 146.286 146.286 146.286-65.714 146.286-146.286zM664 512c0 124.571-100.571 225.143-225.143 225.143s-225.143-100.571-225.143-225.143 100.571-225.143 225.143-225.143 225.143 100.571 225.143 225.143zM725.714 277.714c0 29.143-23.429 52.571-52.571 52.571s-52.571-23.429-52.571-52.571 23.429-52.571 52.571-52.571 52.571 23.429 52.571 52.571zM438.857 152c-64 0-201.143-5.143-258.857 17.714-20 8-34.857 17.714-50.286 33.143s-25.143 30.286-33.143 50.286c-22.857 57.714-17.714 194.857-17.714 258.857s-5.143 201.143 17.714 258.857c8 20 17.714 34.857 33.143 50.286s30.286 25.143 50.286 33.143c57.714 22.857 194.857 17.714 258.857 17.714s201.143 5.143 258.857-17.714c20-8 34.857-17.714 50.286-33.143s25.143-30.286 33.143-50.286c22.857-57.714 17.714-194.857 17.714-258.857s5.143-201.143-17.714-258.857c-8-20-17.714-34.857-33.143-50.286s-30.286-25.143-50.286-33.143c-57.714-22.857-194.857-17.714-258.857-17.714zM877.714 512c0 60.571 0.571 120.571-2.857 181.143-3.429 70.286-19.429 132.571-70.857 184s-113.714 67.429-184 70.857c-60.571 3.429-120.571 2.857-181.143 2.857s-120.571 0.571-181.143-2.857c-70.286-3.429-132.571-19.429-184-70.857s-67.429-113.714-70.857-184c-3.429-60.571-2.857-120.571-2.857-181.143s-0.571-120.571 2.857-181.143c3.429-70.286 19.429-132.571 70.857-184s113.714-67.429 184-70.857c60.571-3.429 120.571-2.857 181.143-2.857s120.571-0.571 181.143 2.857c70.286 3.429 132.571 19.429 184 70.857s67.429 113.714 70.857 184c3.429 60.571 2.857 120.571 2.857 181.143z"
+                          ></path>
+                        </svg>
+                        <span class="thq-body-small">Instagram</span>
+                      </div>
+                      <div class="footer6-link16">
+                        <svg
+                          viewBox="0 0 950.8571428571428 1024"
+                          class="thq-icon-small"
+                        >
+                          <path
+                            d="M925.714 233.143c-25.143 36.571-56.571 69.143-92.571 95.429 0.571 8 0.571 16 0.571 24 0 244-185.714 525.143-525.143 525.143-104.571 0-201.714-30.286-283.429-82.857 14.857 1.714 29.143 2.286 44.571 2.286 86.286 0 165.714-29.143 229.143-78.857-81.143-1.714-149.143-54.857-172.571-128 11.429 1.714 22.857 2.857 34.857 2.857 16.571 0 33.143-2.286 48.571-6.286-84.571-17.143-148-91.429-148-181.143v-2.286c24.571 13.714 53.143 22.286 83.429 23.429-49.714-33.143-82.286-89.714-82.286-153.714 0-34.286 9.143-65.714 25.143-93.143 90.857 112 227.429 185.143 380.571 193.143-2.857-13.714-4.571-28-4.571-42.286 0-101.714 82.286-184.571 184.571-184.571 53.143 0 101.143 22.286 134.857 58.286 41.714-8 81.714-23.429 117.143-44.571-13.714 42.857-42.857 78.857-81.143 101.714 37.143-4 73.143-14.286 106.286-28.571z"
+                          ></path>
+                        </svg>
+                        <span class="thq-body-small">X</span>
+                      </div>
+                      <div class="footer6-link17">
+                        <svg
+                          viewBox="0 0 877.7142857142857 1024"
+                          class="thq-icon-small"
+                        >
+                          <path
+                            d="M135.429 808h132v-396.571h-132v396.571zM276 289.143c-0.571-38.857-28.571-68.571-73.714-68.571s-74.857 29.714-74.857 68.571c0 37.714 28.571 68.571 73.143 68.571h0.571c46.286 0 74.857-30.857 74.857-68.571zM610.286 808h132v-227.429c0-121.714-65.143-178.286-152-178.286-70.857 0-102.286 39.429-119.429 66.857h1.143v-57.714h-132s1.714 37.143 0 396.571v0h132v-221.714c0-11.429 0.571-23.429 4-32 9.714-23.429 31.429-48 68-48 47.429 0 66.286 36 66.286 89.714v212zM877.714 237.714v548.571c0 90.857-73.714 164.571-164.571 164.571h-548.571c-90.857 0-164.571-73.714-164.571-164.571v-548.571c0-90.857 73.714-164.571 164.571-164.571h548.571c90.857 0 164.571 73.714 164.571 164.571z"
+                          ></path>
+                        </svg>
+                        <span class="thq-body-small">LinkedIn</span>
+                      </div>
+                      <div class="footer6-link18">
+                        <svg viewBox="0 0 1024 1024" class="thq-icon-small">
+                          <path
+                            d="M406.286 644.571l276.571-142.857-276.571-144.571v287.429zM512 152c215.429 0 358.286 10.286 358.286 10.286 20 2.286 64 2.286 102.857 43.429 0 0 31.429 30.857 40.571 101.714 10.857 82.857 10.286 165.714 10.286 165.714v77.714s0.571 82.857-10.286 165.714c-9.143 70.286-40.571 101.714-40.571 101.714-38.857 40.571-82.857 40.571-102.857 42.857 0 0-142.857 10.857-358.286 10.857v0c-266.286-2.286-348-10.286-348-10.286-22.857-4-74.286-2.857-113.143-43.429 0 0-31.429-31.429-40.571-101.714-10.857-82.857-10.286-165.714-10.286-165.714v-77.714s-0.571-82.857 10.286-165.714c9.143-70.857 40.571-101.714 40.571-101.714 38.857-41.143 82.857-41.143 102.857-43.429 0 0 142.857-10.286 358.286-10.286v0z"
+                          ></path>
+                        </svg>
+                        <span class="thq-body-small">Youtube</span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="footer6-credits">
+                <div class="footer6-row">
+                  <span>
+                    <fragment class="about-fragment68">
+                      <span class="about-text74 thq-body-small">
+                        © 2023 STYFIT. All Rights Reserved.
+                      </span>
+                    </fragment>
+                  </span>
+                  <div class="footer6-footer-links3">
+                    <span>
+                      <fragment class="about-fragment71">
+                        <span class="about-text77 thq-body-small">
+                          Link to Privacy Policy
+                        </span>
+                      </fragment>
+                    </span>
+                    <span>
+                      <fragment class="about-fragment69">
+                        <span class="about-text75 thq-body-small">
+                          Link to Terms and Conditions
+                        </span>
+                      </fragment>
+                    </span>
+                    <span>
+                      <fragment class="about-fragment70">
+                        <span class="about-text76 thq-body-small">
+                          Link to Cookies Policy
+                        </span>
+                      </fragment>
+                    </span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </footer>
+        </footer6-wrapper>
+      </div>
+    </div>
+    <script
+      defer=""
+      src="https://unpkg.com/@teleporthq/teleport-custom-scripts"
+    ></script>
+  </body>
+</html>

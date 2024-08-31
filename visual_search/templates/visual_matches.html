@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Visual Matches</title>
+    <style>
+        /* Basic styling for the visual matches */
+        .visual-match-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+            padding: 20px;
+            width: 90%;
+            margin: auto;
+        }
+
+        .visual-match {
+            width: 167px;
+            text-align: center;
+            border: 1px solid #ddd;
+            padding: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            border-radius: 5px;
+            transition: transform 0.3s ease;
+            overflow: hidden;
+        }
+
+        .visual-match:hover {
+            transform: scale(1.05);
+        }
+
+        .visual-match img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 4px;
+        }
+
+        .visual-match-title {
+            margin: 10px 0;
+            font-weight: bold;
+            font-size: 1em;
+            color: #333;
+            text-decoration: none;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            max-width: 100%;
+            cursor: pointer;
+        }
+
+        .visual-match-title:hover {
+            text-decoration: underline;
+        }
+
+        .visual-match-price {
+            color: #d9534f;
+            font-weight: bold;
+            font-size: 1.1em;
+            text-decoration: none;
+        }
+
+        a {
+            text-decoration: none;
+        }
+
+        .input-container {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        /* Drop area styling */
+        .drop-area {
+            width: 100%;
+            max-width: 500px;
+            margin: auto;
+            padding: 40px;
+            border: 2px dashed #007bff;
+            border-radius: 5px;
+            background-color: #f9f9f9;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        .drop-area:hover {
+            background-color: #e9ecef;
+        }
+
+        .drop-area.dragover {
+            background-color: #d0e7ff;
+        }
+
+        .drop-area p {
+            margin: 0;
+            font-size: 1.2em;
+            color: #666;
+        }
+
+        .submit-button {
+            padding: 12px 24px;
+            font-size: 1em;
+            border: none;
+            border-radius: 5px;
+            background-color: #28a745;
+            color: white;
+            cursor: pointer;
+            transition: background-color 0.3s ease, transform 0.2s;
+            margin-top: 20px;
+        }
+
+        .submit-button:hover {
+            background-color: #218838;
+        }
+
+        .submit-button:active {
+            transform: scale(0.98);
+        }
+
+        .file-name {
+            margin-top: 10px;
+            font-size: 0.9em;
+            color: #333;
+        }
+
+        .hidden-input {
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <h1 style="text-align: center;">Visual Matches</h1>
+    <div class="input-container">
+        <form method="post" action="" enctype="multipart/form-data">
+            {% csrf_token %}
+            <!-- Drop area for drag-and-drop file upload -->
+            <div class="drop-area" id="drop-area">
+                <p>Drag & Drop your image here or double-click to select</p>
+                <input type="file" name="image_file" id="image-file" class="hidden-input" accept="image/*">
+            </div>
+            <button type="submit" class="submit-button">Search Image</button>
+            <!-- Placeholder for displaying selected file name -->
+            <p class="file-name" id="file-name">No file chosen</p>
+        </form>
+    </div>
+    <div class="visual-match-container">
+        {% if visual_matches %}
+            {% for match in visual_matches %}
+            <div class="visual-match">
+                <a href="{{ match.link }}" target="_blank">
+                    <img src="{{ match.thumbnail }}" alt="{{ match.title }}">
+                    <div class="visual-match-title" title="{{ match.title }}">{{ match.title|slice:":25" }}...</div>
+                    {% if match.price %}
+                    <div class="visual-match-price">{{ match.price.currency }}{{ match.price.extracted_value }}</div>
+                    {% endif %}
+                </a>
+            </div>
+            {% endfor %}
+        {% else %}
+            <p style="text-align: center;">No visual matches found. Please upload an image to search.</p>
+        {% endif %}
+    </div>
+    <script>
+        // JavaScript for drag-and-drop file upload
+        const dropArea = document.getElementById('drop-area');
+        const fileInput = document.getElementById('image-file');
+        const fileNameDisplay = document.getElementById('file-name');
+
+        // Highlight drop area when dragging over it
+        dropArea.addEventListener('dragover', (e) => {
+            e.preventDefault();
+            dropArea.classList.add('dragover');
+        });
+
+        // Remove highlight when drag leaves the area
+        dropArea.addEventListener('dragleave', () => {
+            dropArea.classList.remove('dragover');
+        });
+
+        // Handle dropped files
+        dropArea.addEventListener('drop', (e) => {
+            e.preventDefault();
+            dropArea.classList.remove('dragover');
+            const files = e.dataTransfer.files;
+            if (files.length > 0) {
+                fileInput.files = files;
+                fileNameDisplay.textContent = files[0].name;
+            }
+        });
+
+        // Handle double click on the drop area
+        dropArea.addEventListener('click', () => {
+            fileInput.click();
+        });
+
+        // Update file name when a file is selected through the file input
+        fileInput.addEventListener('change', () => {
+            if (fileInput.files.length > 0) {
+                fileNameDisplay.textContent = fileInput.files[0].name;
+            } else {
+                fileNameDisplay.textContent = 'No file chosen';
+            }
+        });
+    </script>
+</body>
+</html>

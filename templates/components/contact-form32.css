@@ -1,0 +1,95 @@
+.contact-form32-contact9 {
+  display: flex;
+  position: relative;
+  align-items: center;
+  flex-direction: column;
+}
+.contact-form32-image1 {
+  flex: 1;
+  width: auto;
+  height: auto;
+  max-width: 640px;
+  border-radius: var(--dl-radius-radius-radius4);
+}
+.contact-form32-content1 {
+  gap: 0;
+  flex: 1;
+  align-items: stretch;
+}
+.contact-form32-section-title {
+  gap: var(--dl-space-space-unit);
+  display: flex;
+  align-self: stretch;
+  align-items: flex-start;
+  flex-direction: column;
+}
+.contact-form32-content2 {
+  gap: var(--dl-space-space-oneandhalfunits);
+  display: flex;
+  align-self: stretch;
+  align-items: flex-start;
+  flex-direction: column;
+}
+.contact-form32-input1 {
+  gap: var(--dl-space-space-halfunit);
+  display: flex;
+  align-self: stretch;
+  flex-direction: column;
+}
+.contact-form32-input2 {
+  gap: var(--dl-space-space-halfunit);
+  display: flex;
+  align-self: stretch;
+  flex-direction: column;
+}
+.contact-form32-container {
+  gap: var(--dl-space-space-halfunit);
+  display: flex;
+  align-items: flex-start;
+  flex-direction: column;
+  justify-content: center;
+}
+.contact-form32-checkbox1 {
+  gap: var(--dl-space-space-unit);
+  display: flex;
+  align-items: center;
+}
+.contact-form32-text16 {
+  height: auto;
+  font-size: 14px;
+  font-style: Regular;
+  text-align: left;
+  font-family: Roboto;
+  font-weight: 400;
+  line-height: 150%;
+  font-stretch: normal;
+  text-decoration: none;
+}
+.contact-form32-button {
+  align-self: flex-start;
+}
+.contact-form32-fragment1 {
+  display: contents;
+}
+.contact-form32-fragment2 {
+  display: contents;
+}
+.contact-form32-fragment3 {
+  display: contents;
+}
+.contact-form32-fragment4 {
+  display: contents;
+}
+@media(max-width: 991px) {
+  .contact-form32-max-width {
+    flex-direction: column;
+  }
+  .contact-form32-content1 {
+    width: 100%;
+  }
+}
+@media(max-width: 767px) {
+  .contact-form32-image1 {
+    width: 100%;
+  }
+}

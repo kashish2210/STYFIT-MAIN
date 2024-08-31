@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>List of Clothes</title>
+    <style>
+        /* Modern and classy styles */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+        .filter-section {
+            background-color: #fff;
+            padding: 20px;
+            margin: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+        .filter-section form {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+        .filter-section input, .filter-section select {
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            flex: 1;
+            min-width: 150px;
+        }
+        .filter-section button {
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+        .filter-section button:hover {
+            background-color: #0056b3;
+        }
+        .clothes-grid {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            margin: 20px;
+        }
+        .clothes-card {
+            background-color: #fff;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+            overflow: hidden;
+            width: 250px;
+            position: relative;
+        }
+        .clothes-card img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+        .discount-badge {
+            background-color: #d9534f;
+            color: #fff;
+            width: 50px;
+            height: 50px; 
+            border-radius: 50%;
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            font-size: 0.8em;
+            padding: 4px;
+            text-align: center;
+        }
+        .clothes-card h3 {
+            margin: 10px;
+            font-size: 1.1em;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+        .clothes-card .price {
+            margin: 10px;
+            color: green;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <h1>List of Clothes</h1>
+
+    <!-- Filter Section -->
+    <div class="filter-section">
+        <form method="get" action="{% url 'list_clothes' %}">
+            <input type="number" id="min_price" name="min_price" placeholder="Min Price" value="{{ request.GET.min_price }}">
+            <input type="number" id="max_price" name="max_price" placeholder="Max Price" value="{{ request.GET.max_price }}">
+            <select id="size" name="size">
+                <option value="">All Sizes</option>
+                {% for s in sizes %}
+                    <option value="{{ s }}" {% if s == request.GET.size %}selected{% endif %}>{{ s }}</option>
+                {% endfor %}
+            </select>
+            <input type="text" id="search_query" name="search_query" placeholder="Search title or description" value="{{ request.GET.search_query }}">
+            <button type="submit">Filter</button>
+        </form>
+    </div>
+
+    <!-- Clothes Grid -->
+    <div class="clothes-grid">
+        {% for cloth in clothes %}
+            <div class="clothes-card">
+                {% if cloth.discount_rate %}
+                    <div class="discount-badge">{{ cloth.discount_rate|floatformat:2 }}% OFF</div>
+                {% endif %}
+                <img src="{{ cloth.image.url }}" alt="{{ cloth.title }}">
+                <h3>{{ cloth.title|slice:":80" }}</h3>
+                <p class="price">${{ cloth.price_after_discount|floatformat:2 }}</p>
+            </div>
+        {% empty %}
+            <p>No clothes found.</p>
+        {% endfor %}
+    </div>
+</body>
+</html>

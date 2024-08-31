@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sell Cloth</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            padding: 20px;
+        }
+        .form-container {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+            max-width: 400px;
+            margin: auto;
+        }
+        .form-container input {
+            width: calc(100% - 22px);
+            padding: 10px;
+            margin-bottom: 15px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+        }
+        .form-container button {
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 4px;
+            cursor: pointer;
+            width: 100%;
+        }
+        .form-container button:disabled {
+            background-color: #ccc;
+            cursor: not-allowed;
+        }
+        .form-container button:hover {
+            background-color: #0056b3;
+        }
+    </style>
+    <script>
+        // Function to validate the form and enable/disable the submit button
+        function validateForm() {
+            const inputs = document.querySelectorAll('.form-container input');
+            let atLeastOneFilled = false;
+
+            inputs.forEach(input => {
+                if (input.value.trim() !== '' && input.value.trim() !== '0') {
+                    atLeastOneFilled = true;
+                }
+            });
+
+            document.getElementById('submitBtn').disabled = !atLeastOneFilled;
+        }
+
+        // Reset all inputs to zero when the page loads
+        function resetInputs() {
+            document.querySelectorAll('.form-container input').forEach(input => {
+                if (!input.value.trim()) {
+                    input.value = '';
+                }
+            });
+        }
+
+        document.addEventListener('DOMContentLoaded', () => {
+            resetInputs(); // Reset inputs on page load
+            document.querySelectorAll('.form-container input').forEach(input => {
+                input.addEventListener('input', validateForm);
+            });
+        });
+        validateForm();
+        // Ensures that the form fields are reset and button is enabled when navigating back
+        window.addEventListener('pageshow', function (event) {
+            if (event.persisted) {
+                resetInputs(); // Reset the inputs
+                validateForm(); // Revalidate the form
+            }
+        });
+    </script>
+</head>
+<body>
+    <div class="form-container">
+        <h2>Sell Cloth</h2>
+        <form method="post" action="{% url 'sell_cloth' %}">
+            {% csrf_token %}
+            <input type="number" step="0.01" name="cotton_weight" placeholder="Weight in grams for Cotton (default 0)">
+            <input type="number" step="0.01" name="jeans_weight" placeholder="Weight in grams for Jeans and Denim (default 0)">
+            <input type="number" step="0.01" name="woollen_weight" placeholder="Weight in grams for Woollen (default 0)">
+            <input type="number" step="0.01" name="nylon_weight" placeholder="Weight in grams for Nylon (default 0)">
+            <input type="number" step="0.01" name="synthetic_weight" placeholder="Weight in grams for Synthetic (default 0)">
+            <input type="number" step="0.01" name="mix_weight" placeholder="Weight in grams for Mix (default 0)">
+            <button type="submit" id="submitBtn" disabled>Calculate Total Price</button>
+        </form>
+    </div>
+</body>
+</html>

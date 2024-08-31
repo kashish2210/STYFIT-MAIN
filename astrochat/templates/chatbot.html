@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AstroChat</title>
+    <style>
+        body, html {
+            margin: 0;
+            padding: 0;
+            height: 100%;
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+        }
+
+        .chat-container {
+            display: flex;
+            flex-direction: column;
+            height: 100vh;
+            max-width: 600px;
+            margin: 0 auto;
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .chat-title {
+            padding: 15px;
+            border-bottom: 1px solid #ddd;
+            background-color: #007bff;
+            color: white;
+            text-align: center;
+            font-size: 1.5em;
+        }
+
+        .chat-history {
+            flex-grow: 1;
+            padding: 10px;
+            border-bottom: 1px solid #ddd;
+            margin: 0 15px;
+            overflow-y: auto;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .chat-message {
+            display: inline-block;
+            margin-bottom: 10px;
+            padding: 8px 12px;
+            border-radius: 20px;
+            max-width: 75%;
+            word-wrap: break-word;
+        }
+
+        .user-message {
+            background-color: #007bff;
+            color: white;
+            text-align: right;
+            align-self: flex-end;
+            float: right;
+            clear: both;
+        }
+
+        .bot-message {
+            background-color: #f1f1f1;
+            color: black;
+            text-align: left;
+            align-self: flex-start;
+            float: left;
+            clear: both;
+        }
+
+        .chat-form {
+            display: flex;
+            padding: 15px;
+            background-color: #fff;
+        }
+
+        .chat-form input[type="text"] {
+            flex-grow: 1;
+            padding: 10px;
+            margin-right: 10px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+        }
+
+        .chat-form button {
+            padding: 10px;
+            border: none;
+            background-color: #007bff;
+            color: white;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        .chat-form button:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <div class="chat-container">
+        <div class="chat-title">
+            AstroChat
+        </div>
+
+        <!-- Chat History -->
+        <div class="chat-history" id="chat-history">
+            {% for message in chat_history %}
+                <div class="chat-message {% if message.user == 'user' %}user-message{% else %}bot-message{% endif %}">
+                    {{ message.text }}
+                </div>
+            {% endfor %}
+        </div>
+
+        <!-- Chat Form -->
+        <form class="chat-form" id="chat-form">
+            {% csrf_token %}
+            <input type="text" name="user_message" id="user_message" placeholder="Type your message here..." required>
+            <button type="submit">Send</button>
+        </form>
+    </div>
+
+    <script>
+        document.getElementById('chat-form').addEventListener('submit', function(event) {
+            event.preventDefault();  // Prevent the form from submitting normally
+
+            var userMessageInput = document.getElementById('user_message');
+            var userMessage = userMessageInput.value;
+            if (!userMessage.trim()) return;  // Don't allow empty submissions
+
+            // Display the user's message immediately
+            var chatHistory = document.getElementById('chat-history');
+            var userMessageDiv = document.createElement('div');
+            userMessageDiv.className = 'chat-message user-message';
+            userMessageDiv.textContent = userMessage;
+            chatHistory.appendChild(userMessageDiv);
+            chatHistory.scrollTop = chatHistory.scrollHeight;
+
+            // Clear the input
+            userMessageInput.value = '';
+
+            // Send the user's message to the server using AJAX
+            fetch('{% url "chatbot" %}', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                    'X-CSRFToken': '{{ csrf_token }}',
+                },
+                body: JSON.stringify({ user_message: userMessage })
+            })
+            .then(response => response.json())
+            .then(data => {
+                // Display the bot's response
+                var botMessageDiv = document.createElement('div');
+                botMessageDiv.className = 'chat-message bot-message';
+                botMessageDiv.textContent = data.response;
+                chatHistory.appendChild(botMessageDiv);
+                chatHistory.scrollTop = chatHistory.scrollHeight;
+            })
+            .catch(error => console.error('Error:', error));
+        });
+    </script>
+</body>
+</html>

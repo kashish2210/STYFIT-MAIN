@@ -1,0 +1,13 @@
+.section-heading2-section-heading {
+  display: flex;
+  position: relative;
+  align-items: center;
+  margin-bottom: var(--dl-space-space-threeunits);
+  flex-direction: column;
+}
+.section-heading2-text2 {
+  color: var(--dl-color-gray-black60);
+  line-height: 24px;
+}
+
+

@@ -1,0 +1,28 @@
+.category-card7-category-card {
+  flex: 0 0 auto;
+  cursor: pointer;
+  display: flex;
+  position: relative;
+  transition: 0.3s;
+  align-items: center;
+  flex-direction: column;
+}
+.category-card7-category-card:hover {
+  color: var(--dl-color-pallet-yellow);
+  transform: scale(1.2);
+}
+.category-card7-image {
+  width: 120px;
+  height: 120px;
+  object-fit: cover;
+  margin-bottom: var(--dl-space-space-unit);
+  object-position: bottom;
+}
+.category-card7-text {
+  line-height: 14px;
+}
+@media(max-width: 479px) {
+  .category-card7-category-card {
+    width: 100%;
+  }
+}
